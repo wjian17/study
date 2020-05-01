@@ -3,26 +3,36 @@ package org.company.forward.db.config;
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
 import org.mybatis.spring.SqlSessionFactoryBean;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
 import org.springframework.core.env.Environment;
+import org.springframework.core.io.DefaultResourceLoader;
+import org.springframework.core.io.Resource;
+import org.springframework.core.io.ResourceLoader;
+import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 import org.springframework.transaction.PlatformTransactionManager;
 
 import javax.sql.DataSource;
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
 /**
  * 配置多数据源
+ *
  * @author wangjian
  * @version V1.0.0
  */
 @Configuration
 public class DynamicDataSourceConfig {
+
+    private static Logger logger = LoggerFactory.getLogger(DynamicDataSourceConfig.class);
 
     @Autowired
     private Environment env;
@@ -30,12 +40,12 @@ public class DynamicDataSourceConfig {
     @Bean(name = "masterDataSource")
     @Primary
     public DataSource masterDataSource() {
-        String basepath = "spring.datasource.druid.master.";
+        String basepath = "spring.datasource.hikari.master.";
         HikariConfig datasource = new HikariConfig();
-        datasource.setDriverClassName(env.getProperty(basepath+"driverClassName"));
-        datasource.setJdbcUrl(env.getProperty(basepath+"url"));
-        datasource.setUsername(env.getProperty(basepath+"username"));
-        datasource.setPassword(env.getProperty(basepath+"password"));
+        datasource.setDriverClassName(env.getProperty(basepath + "driverClassName"));
+        datasource.setJdbcUrl(env.getProperty(basepath + "url"));
+        datasource.setUsername(env.getProperty(basepath + "username"));
+        datasource.setPassword(env.getProperty(basepath + "password"));
 //        datasource.setConnectionTestQuery(env.getProperty(basepath + "validationQuery"));
 //        datasource.setMaxLifetime(env.getProperty(basepath + "maxLifetime",Long.class));
 //        datasource.setMaximumPoolSize(env.getProperty(basepath + "maximumPoolSize",Integer.class));
@@ -59,12 +69,12 @@ public class DynamicDataSourceConfig {
     @Bean(name = "salverDataSource")
     @Primary
     public DataSource salverDataSource() {
-        String basepath = "spring.datasource.druid.salver.";
+        String basepath = "spring.datasource.hikari.salver.";
         HikariConfig datasource = new HikariConfig();
-        datasource.setDriverClassName(env.getProperty(basepath+"driverClassName"));
-        datasource.setJdbcUrl(env.getProperty(basepath+"url"));
-        datasource.setUsername(env.getProperty(basepath+"username"));
-        datasource.setPassword(env.getProperty(basepath+"password"));
+        datasource.setDriverClassName(env.getProperty(basepath + "driverClassName"));
+        datasource.setJdbcUrl(env.getProperty(basepath + "url"));
+        datasource.setUsername(env.getProperty(basepath + "username"));
+        datasource.setPassword(env.getProperty(basepath + "password"));
 //        datasource.setConnectionTestQuery(env.getProperty(basepath + "validationQuery"));
 //        datasource.setMaxLifetime(env.getProperty(basepath + "maxLifetime",Long.class));
 //        datasource.setMaximumPoolSize(env.getProperty(basepath + "maximumPoolSize",Integer.class));
@@ -87,7 +97,7 @@ public class DynamicDataSourceConfig {
 
     @Bean
     @Primary
-    public DynamicDataSource dataSource(@Qualifier(value = "masterDataSource") DataSource masterDataSource,@Qualifier(value = "salverDataSource") DataSource salverDataSource) {
+    public DynamicDataSource dataSource(@Qualifier(value = "masterDataSource") DataSource masterDataSource, @Qualifier(value = "salverDataSource") DataSource salverDataSource) {
         DynamicDataSource dynamicDataSource = new DynamicDataSource();
         Map<Object, Object> targetDataSources = new HashMap<>(5);
         targetDataSources.put(DataSourceNames.MASTER, masterDataSource);
@@ -98,20 +108,32 @@ public class DynamicDataSourceConfig {
         return dynamicDataSource;
     }
 
-    @Bean(name="sqlSessionFactory")
+    @Bean(name = "sqlSessionFactory")
     @Primary
-    public SqlSessionFactoryBean sqlSessionFactory(@Qualifier(value = "dataSource")DynamicDataSource dataSource){
-        SqlSessionFactoryBean sqlSessionFactoryBean = new SqlSessionFactoryBean();
-        sqlSessionFactoryBean.setDataSource(dataSource);
-        return sqlSessionFactoryBean;
+    public SqlSessionFactoryBean sqlSessionFactory(@Qualifier(value = "dataSource") DataSource dataSource) throws IOException {
+        try {
+            SqlSessionFactoryBean sqlSessionFactoryBean = new SqlSessionFactoryBean();
+            sqlSessionFactoryBean.setDataSource(dataSource);
+            ResourceLoader resourceLoader = new DefaultResourceLoader();
+            Resource configuration = resourceLoader.getResource(env.getProperty("mybatis.configuration"));
+            Resource[] mapperLocations = new PathMatchingResourcePatternResolver().getResources(env.getProperty("mybatis.mapperLocations"));
+            sqlSessionFactoryBean.setConfigLocation(configuration);
+            sqlSessionFactoryBean.setMapperLocations(mapperLocations);
+            sqlSessionFactoryBean.setTypeAliasesPackage(env.getProperty("mybatis.typeAliasesPackage"));
+            return sqlSessionFactoryBean;
+        } catch (Exception e) {
+            logger.error("Could not confiure mapper.mapper session factory", e);
+            return null;
+        }
     }
 
     /**
      * 事务
+     *
      * @return
      */
     @Bean
-    public PlatformTransactionManager transactionManager(@Qualifier(value = "dataSource")DynamicDataSource dataSource){
+    public PlatformTransactionManager transactionManager(@Qualifier(value = "dataSource") DataSource dataSource) {
         return new DataSourceTransactionManager(dataSource);
     }
 }

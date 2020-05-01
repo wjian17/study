@@ -15,11 +15,10 @@ import java.util.List;
 public class EpAlipayBillFlowServerImpl implements EpAlipayBillFlowServer {
 
     @Autowired
-    @Qualifier(value = "epAlipayBillFlowMapper")
     private EpAlipayBillFlowMapper epAlipayBillFlowMapper;
 
     @Override
-    @CurDataSource(name = DataSourceNames.MASTER)
+    @CurDataSource(name = DataSourceNames.SALVER)
     public List<EpAlipayBillFlow> queryEpAlipayBillFlowList(String flowNo) {
         return epAlipayBillFlowMapper.queryEpAlipayBillFlowList(flowNo);
     }
