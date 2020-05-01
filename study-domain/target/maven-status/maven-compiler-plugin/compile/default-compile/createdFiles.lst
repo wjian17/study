@@ -1,2 +1,4 @@
+org\company\forward\domain\basic\BasicErrorCode.class
+org\company\forward\domain\rest\EpAlipayBillFlow.class
 org\company\forward\domain\basic\BasicRequest.class
 org\company\forward\domain\basic\BasicResponse.class

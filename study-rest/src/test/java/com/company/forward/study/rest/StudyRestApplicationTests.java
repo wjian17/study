@@ -1,6 +1,7 @@
 package com.company.forward.study.rest;
 
 import org.company.forward.db.config.DynamicDataSource;
+import org.company.forward.db.config.DynamicDataSourceConfig;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
@@ -12,7 +13,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 @RunWith(SpringRunner.class)
 @SpringBootTest
 @EnableAutoConfiguration(exclude = {DataSourceAutoConfiguration.class})
-@Import(DynamicDataSource.class)
+//@Import(DynamicDataSourceConfig.class)
 class StudyRestApplicationTests {
 
     @Test

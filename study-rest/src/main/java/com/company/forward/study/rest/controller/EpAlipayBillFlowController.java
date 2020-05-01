@@ -18,21 +18,16 @@ public class EpAlipayBillFlowController {
 
     @PostMapping(value = "EpAlipayBillFlow/{flowNo}")
     public BasicResponse EpAlipayBillFlow(@PathVariable String flowNo){
-        BasicResponse basicResponse = new BasicResponse();
-        basicResponse.setErrorCode(BasicErrorCode.SERVICE_SUCCESS_CODE);
-        basicResponse.setErrorMsg(BasicErrorCode.SERVICE_SUCCESS_MSG);
-        List<EpAlipayBillFlow> epAlipayBillFlowList = epAlipayBillFlowServer.queryEpAlipayBillFlowList(flowNo);
-        basicResponse.setBody(epAlipayBillFlowList);
-        return basicResponse;
+        return epAlipayBillFlowServer.queryEpAlipayBillFlowList(flowNo);
     }
 
-    @RequestMapping(value = "test/{flowNo}",method = RequestMethod.GET)
-    public BasicResponse test(@PathVariable String flowNo){
-        BasicResponse basicResponse = new BasicResponse();
-        basicResponse.setErrorCode(BasicErrorCode.SERVICE_SUCCESS_CODE);
-        basicResponse.setErrorMsg(BasicErrorCode.SERVICE_SUCCESS_MSG);
-        List<EpAlipayBillFlow> epAlipayBillFlowList = epAlipayBillFlowServer.queryEpAlipayBillFlowList(flowNo);
-        basicResponse.setBody(epAlipayBillFlowList);
-        return basicResponse;
+    @RequestMapping(value = "hystrixStudyFeignServerClient/{flowNo}",method = RequestMethod.GET)
+    public BasicResponse hystrixStudyFeignServerClient(@PathVariable String flowNo){
+        return epAlipayBillFlowServer.hystrixStudyFeignServerClient(flowNo);
+    }
+
+    @RequestMapping(value = "hystrixStudyFeignServerClientWithCause/{flowNo}",method = RequestMethod.GET)
+    public BasicResponse hystrixStudyFeignServerClientWithCause(@PathVariable String flowNo){
+        return epAlipayBillFlowServer.hystrixStudyFeignServerClientWithCause(flowNo);
     }
 }

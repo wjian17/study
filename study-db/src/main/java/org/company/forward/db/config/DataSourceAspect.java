@@ -30,6 +30,8 @@ public class DataSourceAspect implements Ordered {
 
     @Around("dataSourcePointCut()")
     public Object around(ProceedingJoinPoint point) throws Throwable {
+
+        logger.info("DataSourceAspect is running");
         MethodSignature signature = (MethodSignature) point.getSignature();
         Method method = signature.getMethod();
 

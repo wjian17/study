@@ -9,6 +9,7 @@
         <option value="$PROJECT_DIR$/study-rest/pom.xml" />
         <option value="$PROJECT_DIR$/study-db/pom.xml" />
         <option value="$PROJECT_DIR$/study-domain/pom.xml" />
+        <option value="$PROJECT_DIR$/study-feignserver/pom.xml" />
       </list>
     </option>
   </component>

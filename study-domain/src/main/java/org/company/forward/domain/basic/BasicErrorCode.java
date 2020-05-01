@@ -8,4 +8,6 @@ public class BasicErrorCode {
 
     public static final String SERVICE_ERROR_CODE = "999999";
 
+    public static final String SERVICE_ERROR_TIMEOUT = "999999";
+
 }

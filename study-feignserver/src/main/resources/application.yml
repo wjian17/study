@@ -1,8 +1,6 @@
 # 服务端口号
 server:
-  port: 8762
-  servlet:
-    context-path: /${spring.application.name}
+  port: 8763
 
 #client 相关配置
 eureka:
@@ -23,13 +21,10 @@ eureka:
     # 是否把自己作为服务注册到其他服务注册中心
     register-with-eureka: true
 
-feign:
-  hystrix:
-    enabled: true
 
 spring:
   application:
-    name: study-rest
+    name: study-feignserver
   security:
     user:
       name: admin # 用户密码
