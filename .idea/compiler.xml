@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="study-domain" />
         <module name="study-rest" />
+        <module name="study-db" />
         <module name="study-eureka" />
       </profile>
     </annotationProcessing>
@@ -15,7 +16,8 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="study" options="-parameters" />
-      <module name="study-domain" options="-parameters" />
+      <module name="study-db" options="" />
+      <module name="study-domain" options="" />
       <module name="study-eureka" options="-parameters" />
       <module name="study-rest" options="-parameters" />
     </option>

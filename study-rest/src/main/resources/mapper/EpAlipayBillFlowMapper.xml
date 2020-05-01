@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.company.forward.study.rest.mapper.EpAlipayBillFlowMapper" >
+  <resultMap id="BaseResultMap" type="org.company.forward.domain.rest.EpAlipayBillFlow" >
+    <result column="FLWONO" property="flwono" jdbcType="VARCHAR" />
+    <result column="TRANAMT" property="tranamt" jdbcType="BIGINT" />
+    <result column="TRAN_DATE" property="tranDate" jdbcType="VARCHAR" />
+    <result column="TRAN_TIME" property="tranTime" jdbcType="VARCHAR" />
+    <result column="DATE" property="date" jdbcType="TIMESTAMP" />
+    <result column="TIME" property="time" jdbcType="TIMESTAMP" />
+    <result column="CHANL_FLWO" property="chanlFlwo" jdbcType="VARCHAR" />
+    <result column="PAYMENT_TYPE" property="paymentType" jdbcType="VARCHAR" />
+    <result column="REMARK1" property="remark1" jdbcType="VARCHAR" />
+    <result column="REMARK2" property="remark2" jdbcType="VARCHAR" />
+  </resultMap>
+  <insert id="insert" parameterType="org.company.forward.domain.rest.EpAlipayBillFlow" >
+    insert into ep_alipay_bill_flow (FLWONO, TRANAMT, TRAN_DATE, 
+      TRAN_TIME, DATE, TIME, 
+      CHANL_FLWO, PAYMENT_TYPE, REMARK1, 
+      REMARK2)
+    values (#{flwono,jdbcType=VARCHAR}, #{tranamt,jdbcType=BIGINT}, #{tranDate,jdbcType=VARCHAR}, 
+      #{tranTime,jdbcType=VARCHAR}, #{date,jdbcType=TIMESTAMP}, #{time,jdbcType=TIMESTAMP}, 
+      #{chanlFlwo,jdbcType=VARCHAR}, #{paymentType,jdbcType=VARCHAR}, #{remark1,jdbcType=VARCHAR}, 
+      #{remark2,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="org.company.forward.domain.rest.EpAlipayBillFlow" >
+    insert into ep_alipay_bill_flow
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="flwono != null" >
+        FLWONO,
+      </if>
+      <if test="tranamt != null" >
+        TRANAMT,
+      </if>
+      <if test="tranDate != null" >
+        TRAN_DATE,
+      </if>
+      <if test="tranTime != null" >
+        TRAN_TIME,
+      </if>
+      <if test="date != null" >
+        DATE,
+      </if>
+      <if test="time != null" >
+        TIME,
+      </if>
+      <if test="chanlFlwo != null" >
+        CHANL_FLWO,
+      </if>
+      <if test="paymentType != null" >
+        PAYMENT_TYPE,
+      </if>
+      <if test="remark1 != null" >
+        REMARK1,
+      </if>
+      <if test="remark2 != null" >
+        REMARK2,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="flwono != null" >
+        #{flwono,jdbcType=VARCHAR},
+      </if>
+      <if test="tranamt != null" >
+        #{tranamt,jdbcType=BIGINT},
+      </if>
+      <if test="tranDate != null" >
+        #{tranDate,jdbcType=VARCHAR},
+      </if>
+      <if test="tranTime != null" >
+        #{tranTime,jdbcType=VARCHAR},
+      </if>
+      <if test="date != null" >
+        #{date,jdbcType=TIMESTAMP},
+      </if>
+      <if test="time != null" >
+        #{time,jdbcType=TIMESTAMP},
+      </if>
+      <if test="chanlFlwo != null" >
+        #{chanlFlwo,jdbcType=VARCHAR},
+      </if>
+      <if test="paymentType != null" >
+        #{paymentType,jdbcType=VARCHAR},
+      </if>
+      <if test="remark1 != null" >
+        #{remark1,jdbcType=VARCHAR},
+      </if>
+      <if test="remark2 != null" >
+        #{remark2,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+
+  <select id="queryEpAlipayBillFlowList" resultMap="BaseResultMap" parameterType="java.lang.String">
+    select * from ep_alipay_bill_flow where
+    1=1
+    <if test="flowNo != null" >
+      and #{flowNo,jdbcType=VARCHAR},
+    </if>
+  </select>
+</mapper>

@@ -37,5 +37,9 @@ public class BasicClassUnit {
         System.out.println(s3 == s2);
         System.out.println(s3 == s4);
         System.out.println(s3 == s5);
+
+        double db1 = 3.10d;
+        System.out.println(Double.toString(db1));
+
     }
 }
