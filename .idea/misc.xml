@@ -10,6 +10,8 @@
         <option value="$PROJECT_DIR$/study-db/pom.xml" />
         <option value="$PROJECT_DIR$/study-domain/pom.xml" />
         <option value="$PROJECT_DIR$/study-feignserver/pom.xml" />
+        <option value="$PROJECT_DIR$/study-zuul/pom.xml" />
+        <option value="$PROJECT_DIR$/study-util/pom.xml" />
       </list>
     </option>
   </component>

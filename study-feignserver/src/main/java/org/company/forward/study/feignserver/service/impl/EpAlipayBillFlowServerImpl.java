@@ -6,6 +6,7 @@ import org.company.forward.domain.rest.EpAlipayBillFlow;
 import org.company.forward.study.feignserver.mapper.EpAlipayBillFlowMapper;
 import org.company.forward.study.feignserver.service.EpAlipayBillFlowServer;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -18,6 +19,7 @@ public class EpAlipayBillFlowServerImpl implements EpAlipayBillFlowServer {
 
     @Override
     @CurDataSource(name = DataSourceNames.SALVER)
+    @Cacheable(value="user", key="'user'")
     public List<EpAlipayBillFlow> queryEpAlipayBillFlowList(String flowNo) {
         return epAlipayBillFlowMapper.queryEpAlipayBillFlowList(flowNo);
     }

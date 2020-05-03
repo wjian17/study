@@ -2,6 +2,7 @@ package org.company.forward.study.feignserver;
 
 import org.company.forward.db.config.DataSourceAspect;
 import org.company.forward.db.config.DynamicDataSourceConfig;
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
@@ -13,6 +14,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @EnableTransactionManagement
 @SpringBootApplication(exclude = {DataSourceAutoConfiguration.class})
 @Import(value = {DynamicDataSourceConfig.class, DataSourceAspect.class})
+@MapperScan(basePackages = {"org.company.forward.study.feignserver.mapper"})
 public class StudyFeignserverApplication {
 
     public static void main(String[] args) {

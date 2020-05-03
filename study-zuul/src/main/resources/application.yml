@@ -1,0 +1,68 @@
+
+zuul:
+  #路由前缀
+  prefix: /prefix
+  #表示禁用默认路由，只认我们自己配置的路由.
+  ignoredServices: '*'
+  #sensitiveHeaders是黑名单，默认值不为空。因此，要使Zuul发送所有标头（ignored除外），必须将其显式设置为空列表。如果要将Cookie或授权标头传递到后端
+  #sensitiveHeaders: Cookie,Set-Cookie,Authorization
+  sensitiveHeaders:
+  routes:
+#    study-feignserver: /study/feignserver/**
+    # 该配置方式中，user-route只是给路由一个名称，可以任意起名
+    study-feignserver:
+      path: /study/feignserver/**
+#      url: https://example.com/users_service
+      serviceId: study-feignserver
+      关闭移除代理前缀
+      stripPrefix: false
+
+##负载均衡关闭eureka的，用于提供其他服务的负责，不适用eureka
+#ribbon:
+#  eureka:
+#    enabled: false
+
+
+
+
+# 是否开启超时，默认false，不建议开启
+# hystrix.command.default.execution.isolation.thread.interruptOnTimeout=false
+# 最大线程数量，默认10，Fast Fail 应用，建议使用默认值。
+# hystrix.threadpool.default.coreSize=20
+# 允许在队列中的等待的任务数量，默认5，Fast Fail 应用，建议使用默认值。
+# hystrix.threadpool.default.queueSizeRejectionThreshold=10
+#开启熔断机制
+feign:
+  hystrix:
+    enabled: true
+
+hystrix:
+  command:
+    default
+    study-feignserver:
+      execution:
+        isolation:
+          thread:
+            # 设置hystrix超时时间，默认1000ms
+            timeoutInMilliseconds: 60000
+
+#study-feignserver:
+#  ribbon:
+#    listOfServers: example.com,google.com
+
+  # 这里是 ribbon 要请求的微服务的 service-id 值
+study-feignserver:
+  ribbon:
+    #    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule #配置规则 随机
+    #    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RoundRobinRule #配置规则 轮询
+    #    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RetryRule #配置规则 重试
+    #    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.WeightedResponseTimeRule #配置规则 响应时间权重
+    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.BestAvailableRule #配置规则 最空闲连接策略
+    ConnectTimeout: 500 #请求连接超时时间
+    ReadTimeout: 1000 #请求处理的超时时间
+    OkToRetryOnAllOperations: true #对所有请求都进行重试
+    MaxAutoRetriesNextServer: 2 #切换实例的重试次数
+    MaxAutoRetries: 1 #对当前实例的重试次数
+    listOfServers: http://localhost:8762,http://localhost:8862
+    MaxTotalHttpConnections: 500
+    MaxConnectionsPerHost: 100

@@ -7,5 +7,7 @@
     <file url="file://$PROJECT_DIR$/study-eureka" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/study-feignserver" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/study-rest" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/study-util" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/study-zuul" charset="UTF-8" />
   </component>
 </project>
