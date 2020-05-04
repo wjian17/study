@@ -6,7 +6,7 @@
         <groupId>org.company.forward</groupId>
         <artifactId>study</artifactId>
         <version>1.0-SNAPSHOT</version>
-        <relativePath/> <!-- lookup parent from repository -->
+        <!--      <relativePath/>--><!--仓库中获取-->
     </parent>
     <groupId>com.company.forward</groupId>
     <artifactId>study-eureka</artifactId>
@@ -24,7 +24,10 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
         </dependency>
-
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-security</artifactId>
+        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
