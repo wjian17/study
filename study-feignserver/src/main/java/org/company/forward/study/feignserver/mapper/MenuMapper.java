@@ -5,6 +5,7 @@ import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.company.forward.domain.common.shiro.node.MenuNode;
 import org.company.forward.domain.common.shiro.node.ZTreeNode;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -36,6 +37,7 @@ public interface MenuMapper {
      * @return
      * @date 2017年2月12日 下午9:14:34
      */
+    @Cacheable(cacheNames="context",key="roleId")
     List<Long> getMenuIdsByRoleId(@Param("roleId") Long roleId);
 
     /**
