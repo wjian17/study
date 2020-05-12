@@ -1,8 +1,9 @@
 package org.company.forward.domain.rest;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class EpAlipayBillFlow {
+public class EpAlipayBillFlow implements Serializable {
     private String flwono;
 
     private Long tranamt;
