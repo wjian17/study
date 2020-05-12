@@ -12,6 +12,7 @@
         <module>study-rest</module>
         <module>study-eureka</module>
         <module>study-feignserver</module>
+        <module>study-kafka</module>
     </modules>
 
     <parent>

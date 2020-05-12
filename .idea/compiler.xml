@@ -2,6 +2,7 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
@@ -10,6 +11,7 @@
         <module name="study-rest" />
         <module name="study-zuul" />
         <module name="study-eureka" />
+        <module name="study-kafka" />
         <module name="study-util" />
         <module name="study-domain" />
         <module name="study-db" />
@@ -23,6 +25,7 @@
       <module name="study-domain" options="" />
       <module name="study-eureka" options="-parameters" />
       <module name="study-feignserver" options="-parameters" />
+      <module name="study-kafka" options="-parameters" />
       <module name="study-rest" options="-parameters" />
       <module name="study-util" options="" />
       <module name="study-zuul" options="-parameters" />

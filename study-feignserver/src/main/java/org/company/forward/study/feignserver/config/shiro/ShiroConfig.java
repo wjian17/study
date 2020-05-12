@@ -60,6 +60,7 @@ public class ShiroConfig {
         filterChainDefinitionMap.put("/userLogin/index", "user");
         filterChainDefinitionMap.put("/TestController/**", "anon");
 //        filterChainDefinitionMap.put("/jwt/**", "jwt");
+        filterChainDefinitionMap.put("/test/**", "anon");
         filterChainDefinitionMap.put("/**", "authc");
         filterChainDefinitionMap.put("/userLogin/logout", "logout");
         shiroFilterFactoryBean.setFilterChainDefinitionMap(filterChainDefinitionMap);

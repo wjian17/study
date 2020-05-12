@@ -7,6 +7,7 @@ import org.company.forward.study.feignserver.mapper.EpAlipayBillFlowMapper;
 import org.company.forward.study.feignserver.service.EpAlipayBillFlowServer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.Cacheable;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -17,10 +18,15 @@ public class EpAlipayBillFlowServerImpl implements EpAlipayBillFlowServer {
     @Autowired
     private EpAlipayBillFlowMapper epAlipayBillFlowMapper;
 
+    @Autowired
+    private RedisTemplate<String,Object> redisTemplate;
+
     @Override
     @CurDataSource(name = DataSourceNames.SALVER)
     @Cacheable(value="user", key="'user'")
     public List<EpAlipayBillFlow> queryEpAlipayBillFlowList(String flowNo) {
-        return epAlipayBillFlowMapper.queryEpAlipayBillFlowList(flowNo);
+        List<EpAlipayBillFlow> list = epAlipayBillFlowMapper.queryEpAlipayBillFlowList(flowNo);
+        redisTemplate.opsForList().set(flowNo,100l,list);
+        return list;
     }
 }

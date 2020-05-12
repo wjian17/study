@@ -9,13 +9,13 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@RestController
+@RestController(value = "test")
 public class EpAlipayBillFlowController {
 
     @Autowired
     private EpAlipayBillFlowServer epAlipayBillFlowServer;
 
-    @PostMapping(value = "EpAlipayBillFlow/{flowNo}")
+    @RequestMapping(value = "/EpAlipayBillFlow/{flowNo}",method = RequestMethod.GET)
     public BasicResponse EpAlipayBillFlow(@PathVariable String flowNo){
         BasicResponse basicResponse = new BasicResponse();
         basicResponse.setErrorCode(BasicErrorCode.SERVICE_SUCCESS_CODE);
@@ -25,7 +25,7 @@ public class EpAlipayBillFlowController {
         return basicResponse;
     }
 
-    @RequestMapping(value = "test/{flowNo}",method = RequestMethod.GET)
+    @RequestMapping(value = "/test/{flowNo}",method = RequestMethod.GET)
     public BasicResponse test(@PathVariable String flowNo){
         BasicResponse basicResponse = new BasicResponse();
         basicResponse.setErrorCode(BasicErrorCode.SERVICE_SUCCESS_CODE);
