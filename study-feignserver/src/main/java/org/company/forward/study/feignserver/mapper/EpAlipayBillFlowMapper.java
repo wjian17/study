@@ -4,6 +4,7 @@ package org.company.forward.study.feignserver.mapper;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.company.forward.domain.rest.EpAlipayBillFlow;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -16,5 +17,6 @@ public interface EpAlipayBillFlowMapper {
 
     int insertSelective(EpAlipayBillFlow record);
 
+    @Cacheable(cacheNames = "company_goods_info")
     List<EpAlipayBillFlow> queryEpAlipayBillFlowList(@Param("flowNo") String flowNo);
 }
