@@ -10,10 +10,10 @@
         <module name="study-feignserver" />
         <module name="study-rest" />
         <module name="study-zuul" />
-        <module name="study-eureka" />
-        <module name="study-kafka" />
-        <module name="study-util" />
         <module name="study-domain" />
+        <module name="study-eureka" />
+        <module name="study-util" />
+        <module name="study-kafka" />
         <module name="study-db" />
       </profile>
     </annotationProcessing>
