@@ -32,8 +32,8 @@ public class EpAlipayBillFlowServerImpl implements EpAlipayBillFlowServer {
     @CurDataSource(name = DataSourceNames.SALVER)
     public List<EpAlipayBillFlow> queryEpAlipayBillFlowList(String flowNo) {
         List<EpAlipayBillFlow> list = epAlipayBillFlowMapper.queryEpAlipayBillFlowList(flowNo);
-        cacheManager.getCache("user");
-        redisUtil.set(flowNo,"{'key1':'value'}");
+//        cacheManager.getCache("user");
+//        redisUtil.set(flowNo,"{'key1':'value'}");
         return list;
     }
 }

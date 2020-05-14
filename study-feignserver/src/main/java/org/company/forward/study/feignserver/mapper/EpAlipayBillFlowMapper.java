@@ -17,6 +17,6 @@ public interface EpAlipayBillFlowMapper {
 
     int insertSelective(EpAlipayBillFlow record);
 
-    @Cacheable(cacheNames = "company_goods_info")
+    @Cacheable(cacheNames = "mybatis")
     List<EpAlipayBillFlow> queryEpAlipayBillFlowList(@Param("flowNo") String flowNo);
 }
