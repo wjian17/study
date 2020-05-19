@@ -1,0 +1,149 @@
+====================================================基本数据类型：1字节（8位）=====================================================
+====================================================基本数据类型：1字节（8位）=====================================================
+====================================================基本数据类型：1字节（8位）=====================================================
+基本数据类型：1字节（8位）
+    boolean:    1/8字节
+    byte:   1字节
+    short:   2字节
+    char:   2字节
+    int:   4字节
+    float:   4字节    1符号位 有效位7-8位    1bit（符号位） 8bits（指数位） 23bits（尾数位）
+    long:   8字节
+    double:   8字节   1符号位 有效位15-16位  1bit（符号位） 11bits（指数位） 52bits（尾数位）
+    自动转型：数字默认int型来计算，除非明确标注有大于int型的字符类型 DOUBLE->FLOAT->LONG->INT
+
+float：2^23 = 8388608，一共七位，由于最左为1的一位省略了，这意味着最多能表示8位数： 2*8388608 = 16777216 。有8位有效数字，但绝对能保证的为7位，也即float的精度为7~8位有效数字；
+double：2^52 = 4503599627370496，一共16位，同理，double的精度为16~17位。
+
+数字类型计算精度问题注意用BigDecimal来计算，包裹字符串类型数字，避免精度丢失
+
+如果两个操作数其中有一个是double类型，另一个操作就会转换为double类型。
+　　否则，如果其中一个操作数是float类型，另一个将会转换为float类型。
+　　否则，如果其中一个操作数是long类型，另一个会转换为long类型。
+　　否则，两个操作数都转换为int类型。
+
+字符串类型：final static
+    字符串常量池：直接赋值的引用，存储在字符串常量池中，引用相等
+
+
+
+====================================================集合：Collection=====================================================
+====================================================集合：Collection=====================================================
+====================================================集合：Collection=====================================================
+集合：Collection
+    结构类图：
+        Collection 接口的接口 对象的集合（单列集合）
+        ├——-List 接口：元素按进入先后有序保存，可重复
+        │—————-├ LinkedList 接口实现类， 链表， 插入删除， 没有同步， 线程不安全
+        │—————-├ ArrayList 接口实现类， 数组， 随机访问， 没有同步， 线程不安全
+        │—————-└ Vector 接口实现类 数组， 同步， 线程安全
+        │ ———————-└ Stack 是Vector类的实现类
+        └——-Set 接口： 仅接收一次，不可重复，并做内部排序
+        ├—————-└HashSet 使用hash表（数组）存储元素
+        │————————└ LinkedHashSet 链表维护元素的插入次序
+        └ —————-TreeSet 底层实现为二叉树，元素排好序
+
+        Map 接口 键值对的集合 （双列集合）
+        ├———Hashtable 接口实现类， 同步， 线程安全
+        ├———HashMap 接口实现类 ，没有同步， 线程不安全-
+        │—————–├ LinkedHashMap 双向链表和哈希表实现
+        │—————–└ WeakHashMap
+        ├ ——–TreeMap 红黑树对所有的key进行排序
+        └———IdentifyHashMap
+    Collection:
+        Set:(Map底层实现）
+            HashSet:
+                线程不安全，存取速度快
+                底层实现是一个HashMap（保存数据），实现Set接口
+                默认初始容量为16（为何是16，见下方对HashMap的描述）
+                加载因子为0.75：即当 元素个数 超过 容量长度的0.75倍 时，进行扩容
+                扩容增量：原容量的 1 倍
+                如 HashSet的容量为16，一次扩容后是容量为32
+            TreeSet:
+        List:
+            Vector：
+                默认初始容量为10
+                线程安全，但速度慢
+            　　底层数据结构是数组结构
+            　　加载因子为1：即当 元素个数 超过 容量长度时，进行扩容
+            　　扩容增量：原容量的 1倍
+            ArrayList:
+                默认初始容量为10
+                线程不安全，查询速度快
+                底层数据结构是数组结构
+                扩容增量：原容量的 1.5倍
+            LinkedList:
+    Map:
+        HashMap:
+            transient int size：表示当前HashMap包含的键值对数量
+            transient int modCount：表示当前HashMap修改次数
+            int threshold：表示当前HashMap能够承受的最多的键值对数量，一旦超过这个数量HashMap就会进行扩容
+            final float loadFactor：负载因子，用于扩容
+            static final int DEFAULT_INITIAL_CAPACITY = 1 << 4：默认的table初始容量
+            static final float DEFAULT_LOAD_FACTOR = 0.75f：默认的负载因子
+            static final int TREEIFY_THRESHOLD = 8: 链表长度大于等于该参数转红黑树
+            static final int UNTREEIFY_THRESHOLD = 6: 当树的节点数小于等于该参数转成链表
+            默认初始容量为16,长度始终保持2的n次方
+            加载因子为0.75：即当 元素个数 超过 容量长度的0.75倍 时，进行扩容
+            扩容增量：原容量的 1 倍
+            允许key/value为null
+        TreeMap:
+            红黑树结构
+            线程不安全
+            key是否为null取决比较器判断
+        HashTable:
+            默认初始容量为11
+            线程安全，但是速度慢，不允许key/value为null
+            加载因子为0.75：即当 元素个数 超过 容量长度的0.75倍 时，进行扩容
+            扩容增量：2*原数组长度+1
+
+工具类：
+    Collections:
+        public static void reverse(List<?> list)                                            反转list中元素的顺序
+        public static void shuffle(List<?> list)                                              对list集合元素进行随机排序
+        public static <T extends Comparable<? super T>> void sort(List<T> list)   根据元素的自然排序对指定list集合元素按升序排序
+        public static <T> void sort(List<T> list, Comparator<? super T> c)  根据指定的comparator产生的顺序对list集合元素进行排序
+        public static void swap(List<?> list, int i, int j)                                    将指定list集合中的i处元素和j处元素进行交互
+        public static <T extends Object & Comparable<? super T>> T max(Collection<? extends T> coll)  根据元素的自然排序，返回给定集合中的最大元素
+        public static <T> T max(Collection<? extends T> coll, Comparator<? super T> comp)   根据comparator指定的顺序，返回给定集合中的最大元素
+        public static <T extends Object & Comparable<? super T>> T min(Collection<? extends T> coll)
+        public static <T> T min(Collection<? extends T> coll, Comparator<? super T> comp)
+        public static int frequency(Collection<?> c, Object o)                                                         返回指定集合中指定元素的出现次数
+        public static <T> void copy(List<? super T> dest, List<? extends T> src)
+        public static <T> boolean replaceAll(List<T> list, T oldVal, T newVal)                                 使用新值替换list对象的所有旧值
+    Arrays:
+        public static boolean equals(int[] a, int[] a2)  判断两个数组是否相等
+        public static String toString(int[] a)                 输出数组信息
+        public static void fill(int[] a, int val)                 将指定值填充到数组之中
+        public static void sort(int[] a)                          将数组进行排序
+        public static int binarySearch(int[] a, int key)  对排序后的数组进行二分法检索指定的值
+
+
+
+====================================================线程：Thread=====================================================
+====================================================线程：Thread=====================================================
+====================================================线程：Thread=====================================================
+    （1）SingleThreadExecutor（单线程线程池，自己做一个内存队列 -> 启动后台线程去消费）
+    （2）FixedThreadExecutor（固定数量线程池）：比如说，线程池里面固定就100个线程，超过这个线程数就到队列里面去排队等待
+    （3）CachedThreadExecutor（自动回收空闲线程，根据需要自动新增线程，传说中的无界线程池）：无论有多少任务，根据你的需要，无限制的
+    创建任意多的线程，在最短的时间内来满足你，但是高峰过去之后，如果有大量的线程处于空闲状态，没有活儿可以干，等待60s之后空闲的线程就被销毁了
+    （4）ScheduledThreadExecutor（线程数量无限制，支持定时调度执行某个线程）：提交一个任务，对于这个任务不是立马执行的，是可以设定一个
+    定时调度的逻辑，比如说每隔60s执行一次，这个一般不用，一般来说就用spring schedule的支持
+
+
+
+
+
+====================================================拷贝：clone=====================================================
+====================================================拷贝：clone=====================================================
+====================================================拷贝：clone=====================================================
+clone浅拷贝：
+    拷贝地址不拷贝在堆中的内存，堆中对象属性改变，会影响拷贝结果。
+
+
+
+====================================================JVM=====================================================
+====================================================JVM=====================================================
+====================================================JVM=====================================================
+JVM虚拟机：
+    一套字节码指令集、一组寄存器、一个栈、一个垃圾回收，堆和一个存储方法域。
