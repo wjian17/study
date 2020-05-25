@@ -1,0 +1,8 @@
+{
+  "properties": [
+    {
+      "name": "cloud.stream.kafka.binder.autoCreateTopics",
+      "type": "java.lang.String",
+      "description": "Description for cloud.stream.kafka.binder.autoCreateTopics."
+  }
+] }

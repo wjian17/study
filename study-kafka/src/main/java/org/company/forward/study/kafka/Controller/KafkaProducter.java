@@ -1,5 +1,6 @@
 package org.company.forward.study.kafka.Controller;
 
+import org.company.forward.domain.basic.BasicResponse;
 import org.company.forward.study.kafka.config.BindChannel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -13,8 +14,13 @@ public class KafkaProducter {
     private BindChannel bindChannel;
 
     @RequestMapping("/send/{msg}")
-    public void send(@PathVariable("msg") String msg) {
-        bindChannel.sendMsg(msg);
+    public BasicResponse send(@PathVariable("msg") String msg) {
+        return bindChannel.sendMsg(msg);
+    }
+
+    @RequestMapping("/feignSend")
+    public BasicResponse feignSend(String msg) {
+        return bindChannel.sendMsg(msg);
     }
 
 }

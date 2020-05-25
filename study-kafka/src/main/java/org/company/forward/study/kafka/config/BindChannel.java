@@ -1,5 +1,6 @@
 package org.company.forward.study.kafka.config;
 
+import org.company.forward.domain.basic.BasicResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.stream.annotation.EnableBinding;
 import org.springframework.cloud.stream.messaging.Source;
@@ -11,7 +12,9 @@ public class BindChannel {
     @Autowired
     private Source source;
 
-    public void sendMsg(String msg){
+    public BasicResponse sendMsg(String msg){
+        BasicResponse basicResponse = new BasicResponse();
         source.output().send(MessageBuilder.withPayload(msg).build());
+        return basicResponse;
     }
 }

@@ -15,6 +15,12 @@ public class KafkaProducter {
 
     @PostMapping(value = "/send/{msg}")
     public BasicResponse send(@PathVariable String msg){
+//        hystrixStudyKafkaServerClientWithCause.send();
         return hystrixStudyKafkaServerClientWithCause.send(msg);
+    }
+    @PostMapping(value = "feignSend/{msg}")
+    public BasicResponse feignSend(@PathVariable String msg){
+//        hystrixStudyKafkaServerClientWithCause.send();
+        return hystrixStudyKafkaServerClientWithCause.feignSend(msg);
     }
 }

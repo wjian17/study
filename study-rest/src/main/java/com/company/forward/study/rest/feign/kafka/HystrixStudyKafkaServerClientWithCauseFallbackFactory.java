@@ -18,6 +18,16 @@ public class HystrixStudyKafkaServerClientWithCauseFallbackFactory implements Fa
                     basicResponse.setErrorMsg("fallback; reason was: " + cause.getMessage());
                     return basicResponse;
                 }
+
+                @Override
+                public BasicResponse feignSend(String msg) {
+//                    "fallback; reason was: " + cause.getMessage()
+                    BasicResponse basicResponse = new BasicResponse();
+                    basicResponse.setErrorCode(BasicErrorCode.SERVICE_ERROR_TIMEOUT);
+                    basicResponse.setErrorMsg("fallback; reason was: " + cause.getMessage());
+                    return basicResponse;
+                }
+
             };
         }
     }
