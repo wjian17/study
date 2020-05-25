@@ -5,9 +5,9 @@ import org.company.forward.domain.basic.BasicResponse;
 import org.springframework.stereotype.Component;
 
 @Component
-public class HystrixClientFallback implements HystrixStudyFeignServerClient {
+public class HystrixStudyFeignServerClientFallbackFactory implements HystrixStudyFeignServerClient {
         @Override
-        public BasicResponse iFailSometimes() {
+        public BasicResponse epAlipayBillFlow(String flowNo) {
             BasicResponse basicResponse = new BasicResponse();
             basicResponse.setErrorCode(BasicErrorCode.SERVICE_ERROR_CODE);
             basicResponse.setErrorMsg("falllback；service not avaliable!");

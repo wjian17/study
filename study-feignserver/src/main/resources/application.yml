@@ -25,6 +25,7 @@ eureka:
 spring:
   application:
     name: study-feignserver
+  log-home: /study-log/logs/${spring.application.name}
   security:
     user:
       name: admin # 用户密码
@@ -90,7 +91,13 @@ spring:
         max-idle: 10 # 连接池中的最大空闲连接
         min-idle: 5 # 连接池中的最小空闲连接
         max-wait: -1 # 连接池最大阻塞等待时间（使用负值表示没有限制）
-
+  cloud:
+    loadbalancer:
+      ribbon:
+        enabled: false
+zookeeper:
+  address: 192.168.199.130:2181,192.168.199.130:2182,192.168.199.130:2183
+  timeout: 60000
 mybatis:
   typeAliasesPackage: com.company.forward.domain.rest.*
   mapperLocations: classpath*:mapper/**.xml

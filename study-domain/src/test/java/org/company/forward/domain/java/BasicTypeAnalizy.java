@@ -27,6 +27,12 @@ public class BasicTypeAnalizy {
         System.out.println(a == c);//false
         System.out.println(a == d);//true
 
+        int i1 = 300;
+        int i2 = 300;
+        long l1 = 129;
+        long l2 = 129;
+        System.out.println("i1==i2:"+(i1==i2));
+        System.out.println("l1==l2:"+(l1==l2));
         Boolean e = true;
         Boolean f = new Boolean(true);
         System.out.println(e == f);//false

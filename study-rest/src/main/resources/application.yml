@@ -28,6 +28,7 @@ feign:
     enabled: true
 
 spring:
+  log-home: /study-log/logs/${spring.application.name}
   application:
     name: study-rest
   security:
@@ -46,7 +47,7 @@ spring:
         #允许连接在池中闲置的最长时间。 此设置仅适用于minimumIdle定义为小于maximumPoolSize。一旦池达到连接，空闲连接将不会退出minimumIdle。连接是否因闲置而退出，最大变化量为+30秒
         #平均变化量为+15秒。在超时之前，连接永远不会退出。值为0意味着空闲连接永远不会从池中删除。允许的最小值是10000ms（10秒）。 默认值：600000（10分钟）
         #自动提交行为。它是一个布尔值。 默认值：true
-        #autoCommit: true
+      #autoCommit: true
       master:
         url: jdbc:mysql://localhost:3306/zxyh?characterEncoding=utf8&useSSL=true&serverTimezone=UTC
         username: root
@@ -62,3 +63,24 @@ mybatis:
   typeAliasesPackage: com.company.forward.domain.rest.*
   mapperLocations: classpath*:mapper/**.xml
   configuration: mybatis-config.xml
+
+
+#其中“study-kafka”指明对哪个微服务的调用进行配置，当前配置使用随机策略，修改策略修改最后的类名即可
+study-kafka:
+  ribbon:
+    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
+      ConnectTimeout: 5000   # 设置连接超时时间，单位ms
+      ReadTimeout: 5000 # 设置读取超时时间，单位ms
+      OkToRetryOnAllOperations: true # 对所有操作请求都进行重试
+      MaxAutoRetriesNextServer: 2  # 切换实例的重试次数
+      MaxAutoRetries: 1 # 对当前实例的重试次数
+
+
+#  策略类	名称	说明
+#  RandomRule	随机策略	随机选择 Server
+#  RoundRobinRule	轮训策略	按顺序循环选择 Server
+#  RetryRule	重试策略	在一个配置时问段内当选择 Server 不成功，则一直尝试选择一个可用的 Server
+#  BestAvailableRule	最低并发策略	逐个考察 Server，如果 Server 断路器打开，则忽略，再选择其中并发连接最低的 Server
+#  AvailabilityFilteringRule	可用过滤策略	过滤掉一直连接失败并被标记为 circuit tripped 的 Server，过滤掉那些高并发连接的 Server（active connections 超过配置的网值）
+#  ResponseTimeWeightedRule	响应时间加权策略	根据 Server 的响应时间分配权重。响应时间越长，权重越低，被选择到的概率就越低；响应时间越短，权重越高，被选择到的概率就越高。这个策略很贴切，综合了各种因素，如：网络、磁盘、IO等，这些因素直接影响着响应时间
+#  ZoneAvoidanceRule	区域权衡策略	综合判断 Server 所在区域的性能和 Server 的可用性轮询选择 Server，并且判定一个 AWS Zone 的运行性能是否可用，剔除不可用的 Zone 中的所有 Server

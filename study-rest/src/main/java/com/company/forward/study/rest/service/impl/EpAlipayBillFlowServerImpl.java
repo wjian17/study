@@ -37,13 +37,11 @@ public class EpAlipayBillFlowServerImpl implements EpAlipayBillFlowServer {
         return basicResponse;
     }
 
-    @CurDataSource(name = DataSourceNames.MASTER)
     public BasicResponse hystrixStudyFeignServerClient(String flowNo) {
-        return hystrixStudyFeignServerClient.iFailSometimes();
+        return hystrixStudyFeignServerClient.epAlipayBillFlow(flowNo);
     }
 
-    @CurDataSource(name = DataSourceNames.SALVER)
     public BasicResponse hystrixStudyFeignServerClientWithCause(String flowNo) {
-        return hystrixStudyFeignServerClientWithCause.iFailSometimes();
+        return hystrixStudyFeignServerClientWithCause.epAlipayBillFlow(flowNo);
     }
 }
