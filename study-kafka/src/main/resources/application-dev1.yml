@@ -1,6 +1,6 @@
 # 服务端口号
 server:
-  port: 8765
+  port: 8764
   servlet:
     context-path: /${spring.application.name}
 
