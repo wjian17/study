@@ -1,6 +1,6 @@
 # 服务端口号
 server:
-  port: 8761
+  port: 8760
 
 #Eureka 相关配置
 eureka:
@@ -8,14 +8,15 @@ eureka:
     lease-renewal-interval-in-seconds: 30    #向服务端发送一次心跳，证明自己依然”存活“
     lease-expiration-duration-in-seconds: 2000     #如果我2s之内没有给你发心跳，就代表我“死”了，将我踢出掉
     hostname: localhost
-    instance-id: ${spring.cloud.client.ip-address}:${spring.application.name}:${server.port}:@project.version@
+    instance-id: ${spring.cloud.client.ip-address}:${spring.application.name}:${server.port}:${project.version}
   # 关闭自我保护，及时剔除无用服务
   # 测试时关闭自我保护机制，保证不可用服务及时踢出
   server:
     enableSelfPreservation: true
   client:
     service-url:
-      defaultZone: http://${spring.security.user.name}:${spring.security.user.password}@${eureka.instance.hostname}:${server.port}/eureka/
+      #3个Eureka Server时，以此类推，三个Server相互配置另外2个地址，Client 配置 3个地址
+      defaultZone: http://${spring.security.user.name}:${spring.security.user.password}@${eureka.instance.hostname}:8761/eureka/
     # 是否从其他的服务中心同步服务列表
     fetch-registry: true
     # 是否把自己作为服务注册到其他服务注册中心
@@ -28,6 +29,3 @@ spring:
     user:
       name: admin # 用户密码
       password: admin
-
-project:
-  version: @project.version@

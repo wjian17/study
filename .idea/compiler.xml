@@ -10,13 +10,16 @@
         <module name="study-feignserver" />
         <module name="study-rest" />
         <module name="study-zuul" />
-        <module name="study-domain" />
         <module name="study-eureka" />
-        <module name="study-util" />
         <module name="study-kafka" />
+        <module name="study-util" />
+        <module name="study-domain" />
         <module name="study-db" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="study-eureka-rb" target="8" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
@@ -24,6 +27,7 @@
       <module name="study-db" options="" />
       <module name="study-domain" options="" />
       <module name="study-eureka" options="-parameters" />
+      <module name="study-eureka-rb" options="-parameters" />
       <module name="study-feignserver" options="-parameters" />
       <module name="study-kafka" options="-parameters" />
       <module name="study-rest" options="-parameters" />
