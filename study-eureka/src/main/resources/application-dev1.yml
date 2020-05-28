@@ -6,8 +6,8 @@ server:
 eureka:
   instance:
     prefer-ip-address: true
-    lease-renewal-interval-in-seconds: 30    #向服务端发送一次心跳，证明自己依然”存活“
-    lease-expiration-duration-in-seconds: 2000     #如果我2s之内没有给你发心跳，就代表我“死”了，将我踢出掉
+    #lease-renewal-interval-in-seconds: 5    #向服务端发送一次心跳，证明自己依然”存活“
+    lease-expiration-duration-in-seconds: 10     #如果我2s之内没有给你发心跳，就代表我“死”了，将我踢出掉
     hostname: ${spring.cloud.client.ip-address}
     instance-id: ${spring.cloud.client.ip-address}:${spring.application.name}:${server.port}:${project.version}
   # 关闭自我保护，及时剔除无用服务
