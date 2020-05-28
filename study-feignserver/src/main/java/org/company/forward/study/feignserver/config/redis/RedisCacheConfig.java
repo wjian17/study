@@ -28,7 +28,11 @@ import java.util.Map;
 
 @Configuration
 @EnableRedisRepositories
-public class RedisCacheConfig extends CachingConfigurerSupport {
+/**
+ * @author wangjian
+ * @date 2020/5/28 0028 16:06
+ */
+ public class RedisCacheConfig extends CachingConfigurerSupport {
 
 
     /**
@@ -53,6 +57,7 @@ public class RedisCacheConfig extends CachingConfigurerSupport {
 //        return new CustomCacheResolver(list);
 //    }
 
+    @Override
     @Bean
     public KeyGenerator keyGenerator() {
         return new KeyGenerator() {

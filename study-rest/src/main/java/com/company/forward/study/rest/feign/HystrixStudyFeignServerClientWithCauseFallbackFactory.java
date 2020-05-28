@@ -6,7 +6,11 @@ import org.company.forward.domain.basic.BasicResponse;
 import org.springframework.stereotype.Component;
 
 @Component
-public class HystrixStudyFeignServerClientWithCauseFallbackFactory implements FallbackFactory<HystrixStudyFeignServerClientWithCause> {
+/**
+ * @author wangjian
+ * @date 2020/5/28 0028 16:06
+ */
+ public class HystrixStudyFeignServerClientWithCauseFallbackFactory implements FallbackFactory<HystrixStudyFeignServerClientWithCause> {
         @Override
         public HystrixStudyFeignServerClientWithCause create(Throwable cause) {
             return new HystrixStudyFeignServerClientWithCause() {

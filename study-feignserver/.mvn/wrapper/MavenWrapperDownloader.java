@@ -19,7 +19,11 @@ import java.io.*;
 import java.nio.channels.*;
 import java.util.Properties;
 
-public class MavenWrapperDownloader {
+/**
+ * @author wangjian
+ * @date 2020/5/28 0028 16:06
+ */
+ public class MavenWrapperDownloader {
 
     private static final String WRAPPER_VERSION = "0.5.6";
     /**

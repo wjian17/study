@@ -27,7 +27,11 @@ import java.util.List;
  * @date 2017年2月17日 下午8:25:14
  */
 @Data
-public class TreeviewNode implements Tree {
+/**
+ * @author wangjian
+ * @date 2020/5/28 0028 16:06
+ */
+ public class TreeviewNode implements Tree {
 
     /**
      * 附加信息，一般用于存业务id

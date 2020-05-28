@@ -5,7 +5,11 @@ import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ReflectAnalizy {
+/**
+ * @author wangjian
+ * @date 2020/5/28 0028 16:06
+ */
+ public class ReflectAnalizy {
 
     public static void main(String[] args) throws Exception {
         new ReflectAnalizy().testReflect();

@@ -11,7 +11,11 @@ import javax.annotation.PostConstruct;
 import java.util.List;
 
 @Component
-public class ZkApi {
+/**
+ * @author wangjian
+ * @date 2020/5/28 0028 16:06
+ */
+ public class ZkApi {
 
     private static final Logger logger = LoggerFactory.getLogger(ZkApi.class);
 

@@ -5,7 +5,11 @@ import lombok.Data;
 import java.io.Serializable;
 
 @Data
-public class BasicResponse implements Serializable {
+/**
+ * @author wangjian
+ * @date 2020/5/28 0028 16:06
+ */
+ public class BasicResponse implements Serializable {
 
     private String errorCode;
 

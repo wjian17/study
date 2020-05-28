@@ -22,7 +22,11 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @EnableAspectJAutoProxy
 @EnableFeignClients
 @EnableHystrix
-public class StudyRestApplication {
+/**
+ * @author wangjian
+ * @date 2020/5/28 0028 16:06
+ */
+ public class StudyRestApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(StudyRestApplication.class, args);

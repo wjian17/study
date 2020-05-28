@@ -25,7 +25,11 @@ import lombok.Data;
  * @date 2017年2月17日 下午8:25:14
  */
 @Data
-public class ZTreeNode {
+/**
+ * @author wangjian
+ * @date 2020/5/28 0028 16:06
+ */
+ public class ZTreeNode {
 
     /**
      * 节点id

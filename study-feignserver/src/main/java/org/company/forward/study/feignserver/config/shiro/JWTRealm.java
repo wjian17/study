@@ -21,7 +21,11 @@ import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 
-public class JWTRealm extends AuthorizingRealm {
+/**
+ * @author wangjian
+ * @date 2020/5/28 0028 16:06
+ */
+ public class JWTRealm extends AuthorizingRealm {
 
     private static final Logger LOGGER = LogManager.getLogger(JWTRealm.class);
 

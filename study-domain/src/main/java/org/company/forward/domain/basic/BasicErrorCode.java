@@ -1,6 +1,10 @@
 package org.company.forward.domain.basic;
 
-public class BasicErrorCode {
+/**
+ * @author wangjian
+ * @date 2020/5/28 0028 16:06
+ */
+ public class BasicErrorCode {
 
     public static final String SERVICE_SUCCESS_CODE = "000000";
 

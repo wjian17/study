@@ -8,7 +8,11 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class KafkaProducter {
+/**
+ * @author wangjian
+ * @date 2020/5/28 0028 16:06
+ */
+ public class KafkaProducter {
 
     @Autowired
     private HystrixStudyKafkaServerClientWithCause hystrixStudyKafkaServerClientWithCause;

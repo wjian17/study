@@ -8,7 +8,11 @@ import org.springframework.stereotype.Component;
 
 @Component
 @EnableBinding(value = {StreamClient.class})
-public class StreamReceiver {
+/**
+ * @author wangjian
+ * @date 2020/5/28 0028 16:06
+ */
+ public class StreamReceiver {
  
     private Logger logger = LoggerFactory.getLogger(StreamReceiver.class);
  

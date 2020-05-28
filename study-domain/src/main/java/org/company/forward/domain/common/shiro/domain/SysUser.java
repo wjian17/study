@@ -6,7 +6,11 @@ import java.util.Date;
 import java.util.Objects;
 
 @Data
-public class SysUser {
+/**
+ * @author wangjian
+ * @date 2020/5/28 0028 16:06
+ */
+ public class SysUser {
     private long userId;
     private String avatar;
     private String account;
@@ -28,8 +32,12 @@ public class SysUser {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
         SysUser sysUser = (SysUser) o;
         return userId == sysUser.userId &&
                 Objects.equals(avatar, sysUser.avatar) &&

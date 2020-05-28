@@ -6,7 +6,11 @@ import java.util.Date;
 import java.util.Objects;
 
 @Data
-public class SysDict {
+/**
+ * @author wangjian
+ * @date 2020/5/28 0028 16:06
+ */
+ public class SysDict {
     private long dictId;
     private Long pid;
     private String name;
@@ -20,8 +24,12 @@ public class SysDict {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
         SysDict sysDict = (SysDict) o;
         return dictId == sysDict.dictId &&
                 Objects.equals(pid, sysDict.pid) &&

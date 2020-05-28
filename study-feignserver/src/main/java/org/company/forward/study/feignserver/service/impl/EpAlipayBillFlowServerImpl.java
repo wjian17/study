@@ -14,7 +14,11 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class EpAlipayBillFlowServerImpl implements EpAlipayBillFlowServer {
+/**
+ * @author wangjian
+ * @date 2020/5/28 0028 16:06
+ */
+ public class EpAlipayBillFlowServerImpl implements EpAlipayBillFlowServer {
 
     @Autowired
     private EpAlipayBillFlowMapper epAlipayBillFlowMapper;

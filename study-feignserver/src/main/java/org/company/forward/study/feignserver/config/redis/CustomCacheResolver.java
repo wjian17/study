@@ -13,7 +13,11 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 
-public class CustomCacheResolver implements CacheResolver, InitializingBean {
+/**
+ * @author wangjian
+ * @date 2020/5/28 0028 16:06
+ */
+ public class CustomCacheResolver implements CacheResolver, InitializingBean {
 
     @Nullable
     private List<CacheManager> cacheManagerList;

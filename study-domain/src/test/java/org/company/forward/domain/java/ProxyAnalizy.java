@@ -4,7 +4,11 @@ import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
 
-public class ProxyAnalizy {
+/**
+ * @author wangjian
+ * @date 2020/5/28 0028 16:06
+ */
+ public class ProxyAnalizy {
 
     public static void main(String[] args) {
         IHello hello = (IHello) new DynamicProxy().bind(new Hello());

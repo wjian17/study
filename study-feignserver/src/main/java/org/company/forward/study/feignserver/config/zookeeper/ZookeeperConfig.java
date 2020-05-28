@@ -12,7 +12,11 @@ import org.springframework.context.annotation.Configuration;
 import java.util.concurrent.CountDownLatch;
 
 @Configuration
-public class ZookeeperConfig {
+/**
+ * @author wangjian
+ * @date 2020/5/28 0028 16:06
+ */
+ public class ZookeeperConfig {
     private static final Logger logger = LoggerFactory.getLogger(ZookeeperConfig.class);
 
     @Value("${zookeeper.address}")

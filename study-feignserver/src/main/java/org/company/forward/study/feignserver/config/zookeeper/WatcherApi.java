@@ -5,7 +5,11 @@ import org.apache.zookeeper.Watcher;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class WatcherApi implements Watcher {
+/**
+ * @author wangjian
+ * @date 2020/5/28 0028 16:06
+ */
+ public class WatcherApi implements Watcher {
 
     private static final Logger logger = LoggerFactory.getLogger(WatcherApi.class);
     @Override

@@ -30,7 +30,11 @@ import java.util.Map;
  * @version V1.0.0
  */
 @Configuration
-public class DynamicDataSourceConfig {
+/**
+ * @author wangjian
+ * @date 2020/5/28 0028 16:06
+ */
+ public class DynamicDataSourceConfig {
 
     private static Logger logger = LoggerFactory.getLogger(DynamicDataSourceConfig.class);
 

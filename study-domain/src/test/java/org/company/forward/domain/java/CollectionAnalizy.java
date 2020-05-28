@@ -4,7 +4,11 @@ import org.junit.Test;
 
 import java.util.*;
 
-public class CollectionAnalizy {
+/**
+ * @author wangjian
+ * @date 2020/5/28 0028 16:06
+ */
+ public class CollectionAnalizy {
 
     @Test
     /**

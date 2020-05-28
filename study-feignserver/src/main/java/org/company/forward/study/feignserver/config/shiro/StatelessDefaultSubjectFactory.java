@@ -4,7 +4,11 @@ import org.apache.shiro.subject.Subject;
 import org.apache.shiro.subject.SubjectContext;
 import org.apache.shiro.web.mgt.DefaultWebSubjectFactory;
 
-public class StatelessDefaultSubjectFactory extends DefaultWebSubjectFactory {
+/**
+ * @author wangjian
+ * @date 2020/5/28 0028 16:06
+ */
+ public class StatelessDefaultSubjectFactory extends DefaultWebSubjectFactory {
     @Override
     public Subject createSubject(SubjectContext context) {
         //不创建session

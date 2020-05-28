@@ -16,7 +16,11 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-public class EpAlipayBillFlowController {
+/**
+ * @author wangjian
+ * @date 2020/5/28 0028 16:06
+ */
+ public class EpAlipayBillFlowController {
 
     private static Logger logger = LoggerFactory.getLogger(EpAlipayBillFlowController.class);
 
@@ -24,7 +28,7 @@ public class EpAlipayBillFlowController {
     private EpAlipayBillFlowServer epAlipayBillFlowServer;
 
     @RequestMapping(value = "/EpAlipayBillFlow/{flowNo}",method = RequestMethod.GET)
-    public BasicResponse EpAlipayBillFlow(@PathVariable String flowNo){
+    public BasicResponse epAlipayBillFlow(@PathVariable String flowNo){
         BasicResponse basicResponse = new BasicResponse();
         basicResponse.setErrorCode(BasicErrorCode.SERVICE_SUCCESS_CODE);
         basicResponse.setErrorMsg(BasicErrorCode.SERVICE_SUCCESS_MSG);

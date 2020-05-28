@@ -14,7 +14,11 @@ import java.util.Map;
  * @author wangjian
  * @version V1.0.0
  */
-public class DynamicDataSource extends AbstractRoutingDataSource {
+/**
+ * @author wangjian
+ * @date 2020/5/28 0028 16:06
+ */
+ public class DynamicDataSource extends AbstractRoutingDataSource {
 
     /**
      * ThreadLocal 用于提供线程局部变量，在多线程环境可以保证各个线程里的变量独立于其它线程里的变量。

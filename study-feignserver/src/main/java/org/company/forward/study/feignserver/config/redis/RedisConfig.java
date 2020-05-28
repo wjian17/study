@@ -19,7 +19,11 @@ import org.springframework.data.redis.serializer.StringRedisSerializer;
 
 @Configuration
 @EnableRedisRepositories
-public class RedisConfig{
+/**
+ * @author wangjian
+ * @date 2020/5/28 0028 16:06
+ */
+ public class RedisConfig{
 
 //    @Bean
 //    public JedisPoolConfig jedisPoolConfig(){

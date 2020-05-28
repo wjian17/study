@@ -6,7 +6,11 @@ import java.util.Date;
 import java.util.Objects;
 
 @Data
-public class SysMenu {
+/**
+ * @author wangjian
+ * @date 2020/5/28 0028 16:06
+ */
+ public class SysMenu {
     private long menuId;
     private String code;
     private String pcode;
@@ -28,8 +32,12 @@ public class SysMenu {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
         SysMenu sysMenu = (SysMenu) o;
         return menuId == sysMenu.menuId &&
                 Objects.equals(code, sysMenu.code) &&

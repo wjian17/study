@@ -5,7 +5,11 @@ import org.company.forward.domain.basic.BasicResponse;
 import org.springframework.stereotype.Component;
 
 @Component
-public class HystrixStudyFeignServerClientFallbackFactory implements HystrixStudyFeignServerClient {
+/**
+ * @author wangjian
+ * @date 2020/5/28 0028 16:06
+ */
+ public class HystrixStudyFeignServerClientFallbackFactory implements HystrixStudyFeignServerClient {
         @Override
         public BasicResponse epAlipayBillFlow(String flowNo) {
             BasicResponse basicResponse = new BasicResponse();

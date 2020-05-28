@@ -19,7 +19,7 @@ import java.lang.reflect.Method;
  */
 @Aspect
 @Component
-public class DataSourceAspect implements Ordered {
+ public class DataSourceAspect implements Ordered {
 
     private static Logger logger = LoggerFactory.getLogger(DataSourceAspect.class);
 
@@ -52,6 +52,7 @@ public class DataSourceAspect implements Ordered {
         }
     }
 
+    @Override
     public int getOrder() {
         return 1;
     }

@@ -11,13 +11,17 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-public class EpAlipayBillFlowController {
+/**
+ * @author wangjian
+ * @date 2020/5/28 0028 16:06
+ */
+ public class EpAlipayBillFlowController {
 
     @Autowired
     private EpAlipayBillFlowServer epAlipayBillFlowServer;
 
     @PostMapping(value = "EpAlipayBillFlow/{flowNo}")
-    public BasicResponse EpAlipayBillFlow(@PathVariable String flowNo){
+    public BasicResponse epAlipayBillFlow(@PathVariable String flowNo){
         return epAlipayBillFlowServer.queryEpAlipayBillFlowList(flowNo);
     }
 

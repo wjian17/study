@@ -17,7 +17,11 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @Import(value = {DynamicDataSourceConfig.class, DataSourceAspect.class})
 @MapperScan(basePackages = {"org.company.forward.study.feignserver.mapper"})
 @EnableCaching
-public class StudyFeignserverApplication {
+/**
+ * @author wangjian
+ * @date 2020/5/28 0028 16:06
+ */
+ public class StudyFeignserverApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(StudyFeignserverApplication.class, args);

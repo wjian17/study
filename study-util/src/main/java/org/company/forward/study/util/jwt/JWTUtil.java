@@ -9,7 +9,11 @@ import com.auth0.jwt.interfaces.DecodedJWT;
 import java.io.UnsupportedEncodingException;
 import java.util.Date;
 
-public class JWTUtil {
+/**
+ * @author wangjian
+ * @date 2020/5/28 0028 16:06
+ */
+ public class JWTUtil {
     // 过期时间5分钟
     private static final long EXPIRE_TIME = 5*60*1000;
 

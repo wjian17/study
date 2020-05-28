@@ -6,7 +6,11 @@ import java.util.Date;
 import java.util.Objects;
 
 @Data
-public class SysDept {
+/**
+ * @author wangjian
+ * @date 2020/5/28 0028 16:06
+ */
+ public class SysDept {
     private long deptId;
     private Long pid;
     private String pids;
@@ -22,8 +26,12 @@ public class SysDept {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
         SysDept sysDept = (SysDept) o;
         return deptId == sysDept.deptId &&
                 Objects.equals(pid, sysDept.pid) &&

@@ -13,7 +13,11 @@ import java.util.concurrent.TimeUnit;
  * RedisTemplate 工具类
  */
 @Component
-public class RedisUtil {
+/**
+ * @author wangjian
+ * @date 2020/5/28 0028 16:06
+ */
+ public class RedisUtil {
 
     @Autowired
     private RedisTemplate redisTemplate;

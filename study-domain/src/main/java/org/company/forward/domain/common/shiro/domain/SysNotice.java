@@ -6,7 +6,11 @@ import java.util.Date;
 import java.util.Objects;
 
 @Data
-public class SysNotice {
+/**
+ * @author wangjian
+ * @date 2020/5/28 0028 16:06
+ */
+ public class SysNotice {
     private long noticeId;
     private String title;
     private String content;
@@ -17,8 +21,12 @@ public class SysNotice {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
         SysNotice sysNotice = (SysNotice) o;
         return noticeId == sysNotice.noticeId &&
                 Objects.equals(title, sysNotice.title) &&

@@ -23,7 +23,11 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-public class MyRealm extends AuthorizingRealm {
+/**
+ * @author wangjian
+ * @date 2020/5/28 0028 16:06
+ */
+ public class MyRealm extends AuthorizingRealm {
 
     @Autowired
     private MenuMapper menuMapper;

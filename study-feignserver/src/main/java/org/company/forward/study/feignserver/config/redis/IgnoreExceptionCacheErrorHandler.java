@@ -5,7 +5,11 @@ import org.slf4j.LoggerFactory;
 import org.springframework.cache.Cache;
 import org.springframework.cache.interceptor.CacheErrorHandler;
 
-public class IgnoreExceptionCacheErrorHandler implements CacheErrorHandler {
+/**
+ * @author wangjian
+ * @date 2020/5/28 0028 16:06
+ */
+ public class IgnoreExceptionCacheErrorHandler implements CacheErrorHandler {
 
     private static final Logger log = LoggerFactory.getLogger(IgnoreExceptionCacheErrorHandler.class);
 

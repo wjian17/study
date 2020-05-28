@@ -26,7 +26,11 @@ import java.util.*;
  * @date 2016年12月6日 上午11:34:17
  */
 @Data
-public class MenuNode implements Comparable, Serializable {
+/**
+ * @author wangjian
+ * @date 2020/5/28 0028 16:06
+ */
+ public class MenuNode implements Comparable, Serializable {
 
     /**
      * 节点id
@@ -122,7 +126,7 @@ public class MenuNode implements Comparable, Serializable {
         }
 
         //剔除非菜单
-        nodes.removeIf(node -> !node.getIsmenu().equals("Y"));
+        nodes.removeIf(node -> !"Y".equals(node.getIsmenu()));
 
         //对菜单排序，返回列表按菜单等级，序号的排序方式排列
         Collections.sort(nodes);

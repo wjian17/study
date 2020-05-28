@@ -2,7 +2,11 @@ package org.company.forward.domain.java;
 
 import org.junit.Test;
 
-public class BasicTypeAnalizy {
+/**
+ * @author wangjian
+ * @date 2020/5/28 0028 16:06
+ */
+ public class BasicTypeAnalizy {
 
     @Test
     /**

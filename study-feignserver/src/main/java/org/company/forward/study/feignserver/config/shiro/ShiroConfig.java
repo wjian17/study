@@ -25,7 +25,11 @@ import java.util.List;
 import java.util.Map;
 
 @Configuration
-public class ShiroConfig {
+/**
+ * @author wangjian
+ * @date 2020/5/28 0028 16:06
+ */
+ public class ShiroConfig {
 
     @Bean
     public ShiroFilterFactoryBean shiroFilter(DefaultWebSecurityManager mySecurityMananger) {

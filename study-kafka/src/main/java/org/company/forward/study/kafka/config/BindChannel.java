@@ -7,7 +7,11 @@ import org.springframework.messaging.support.MessageBuilder;
 
 //这个注解给我们绑定消息通道的，Source是Stream给我们提供的，可以点进去看源码，可以看到output和input,这和配置文件中的output，input对应的。
 @EnableBinding(value = {StreamClient.class})
-public class BindChannel {
+/**
+ * @author wangjian
+ * @date 2020/5/28 0028 16:06
+ */
+ public class BindChannel {
     @Autowired
     private StreamClient streamClient;
 

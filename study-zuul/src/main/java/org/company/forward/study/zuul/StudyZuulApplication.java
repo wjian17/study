@@ -8,7 +8,11 @@ import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
 @SpringBootApplication
 @EnableZuulProxy
 @EnableDiscoveryClient
-public class StudyZuulApplication {
+/**
+ * @author wangjian
+ * @date 2020/5/28 0028 16:06
+ */
+ public class StudyZuulApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(StudyZuulApplication.class, args);

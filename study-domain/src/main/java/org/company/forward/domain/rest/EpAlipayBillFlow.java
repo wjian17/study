@@ -3,7 +3,11 @@ package org.company.forward.domain.rest;
 import java.io.Serializable;
 import java.util.Date;
 
-public class EpAlipayBillFlow implements Serializable {
+/**
+ * @author wangjian
+ * @date 2020/5/28 0028 16:06
+ */
+ public class EpAlipayBillFlow implements Serializable {
     private String flwono;
 
     private Long tranamt;

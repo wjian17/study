@@ -1,6 +1,10 @@
 package org.company.forward.domain.java;
 
-public class CloneAnalizy {
+/**
+ * @author wangjian
+ * @date 2020/5/28 0028 16:06
+ */
+ public class CloneAnalizy {
 
     public static void main(String[] args) throws Exception{
         Clone1 clone1 = new Clone1();

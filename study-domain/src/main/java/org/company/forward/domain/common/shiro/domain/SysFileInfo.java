@@ -6,7 +6,11 @@ import java.util.Date;
 import java.util.Objects;
 
 @Data
-public class SysFileInfo {
+/**
+ * @author wangjian
+ * @date 2020/5/28 0028 16:06
+ */
+ public class SysFileInfo {
     private String fileId;
     private String fileData;
     private Date createTime;
@@ -16,8 +20,12 @@ public class SysFileInfo {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
         SysFileInfo that = (SysFileInfo) o;
         return Objects.equals(fileId, that.fileId) &&
                 Objects.equals(fileData, that.fileData) &&
