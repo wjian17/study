@@ -1,7 +1,7 @@
 package com.company.forward.study.rest.feign;
 
 import feign.hystrix.FallbackFactory;
-import org.company.forward.domain.basic.BasicErrorCode;
+import org.company.forward.domain.enums.BasicErrorCode;
 import org.company.forward.domain.basic.BasicResponse;
 import org.springframework.stereotype.Component;
 
@@ -18,7 +18,7 @@ import org.springframework.stereotype.Component;
                 public BasicResponse epAlipayBillFlow(String flowNo) {
 //                    "fallback; reason was: " + cause.getMessage()
                     BasicResponse basicResponse = new BasicResponse();
-                    basicResponse.setErrorCode(BasicErrorCode.SERVICE_ERROR_TIMEOUT);
+                    basicResponse.setErrorCode(BasicErrorCode.SERVICE_ERROR_TIMEOUT_CODE);
                     basicResponse.setErrorMsg("fallback; reason was: " + cause.getMessage());
                     return basicResponse;
                 }

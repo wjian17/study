@@ -2,6 +2,7 @@ package org.company.forward.study.feignserver;
 
 import org.company.forward.db.config.DataSourceAspect;
 import org.company.forward.db.config.DynamicDataSourceConfig;
+import org.company.forward.study.feignserver.config.ClassForJarInstallImportSelector;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -14,7 +15,8 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @EnableDiscoveryClient
 @EnableTransactionManagement
 @SpringBootApplication(exclude = {DataSourceAutoConfiguration.class})
-@Import(value = {DynamicDataSourceConfig.class, DataSourceAspect.class})
+@Import(value = {DynamicDataSourceConfig.class, DataSourceAspect.class, ClassForJarInstallImportSelector.class})
+//@Import(value = {DynamicDataSourceConfig.class, DataSourceAspect.class, RedisCacheConfig.class, RedisConfig.class})
 @MapperScan(basePackages = {"org.company.forward.study.feignserver.mapper"})
 @EnableCaching
 /**

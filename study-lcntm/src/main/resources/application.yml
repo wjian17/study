@@ -1,0 +1,108 @@
+# 服务端口号
+server:
+  port: 8766
+
+#client 相关配置
+eureka:
+  instance:
+    #lease-renewal-interval-in-seconds: 5    #向服务端发送一次心跳，证明自己依然”存活“
+    #lease-expiration-duration-in-seconds: 20     #如果我2s之内没有给你发心跳，就代表我“死”了，将我踢出掉
+    hostname: localhost
+    instance-id: ${spring.cloud.client.ip-address}:${spring.application.name}:${server.port}:@project.version@
+  # 关闭自我保护，及时剔除无用服务
+  # 测试时关闭自我保护机制，保证不可用服务及时踢出
+  server:
+    enableSelfPreservation: true
+  client:
+    service-url:
+      defaultZone: http://${spring.security.user.name}:${spring.security.user.password}@${eureka.instance.hostname}:8761/eureka/
+    # 是否从其他的服务中心同步服务列表
+    fetch-registry: true
+    # 是否把自己作为服务注册到其他服务注册中心
+    register-with-eureka: true
+
+
+spring:
+  application:
+    name: study-lcntm
+  log-home: /study-log/logs/${spring.application.name}
+  security:
+    user:
+      name: admin # 用户密码
+      password: admin
+  jpa:
+    show-sql: true
+  cache:
+    type: redis
+  datasource:
+    url: jdbc:mysql://localhost:3306/zxyh?characterEncoding=utf8&useSSL=true&serverTimezone=UTC
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    hikari:
+      maxLifetime: 1765000 #一个连接的生命时长（毫秒），超时而且没被使用则被释放（retired），缺省:30分钟，建议设置比数据库超时时长少30秒以上
+      maximumPoolSize: 15
+      #连接池中允许的最大连接数。缺省值：10；推荐的公式：((core_count * 2) + effective_spindle_count)
+      idleTimeout: 600000
+        #connectionTimeout: 30000 #等待来自池的连接的最大毫秒数。如果在没有可用连接的情况下超过此时间，则会抛出SQLException。最低可接受的连接超时时间为250 ms。 默认值：30000（30秒）
+        #允许连接在池中闲置的最长时间。 此设置仅适用于minimumIdle定义为小于maximumPoolSize。一旦池达到连接，空闲连接将不会退出minimumIdle。连接是否因闲置而退出，最大变化量为+30秒
+        #平均变化量为+15秒。在超时之前，连接永远不会退出。值为0意味着空闲连接永远不会从池中删除。允许的最小值是10000ms（10秒）。 默认值：600000（10分钟）
+        #自动提交行为。它是一个布尔值。 默认值：true
+        #autoCommit: true
+  #redis集群版
+  redis:
+    timeout: 6000ms
+    database: 0
+    cluster:
+      nodes:
+        - 192.168.199.130:6379
+        - 192.168.199.130:6380
+        - 192.168.199.130:6381
+#        - 192.168.199.130:6382
+#        - 192.168.199.130:6383
+#        - 192.168.199.130:6384
+      max-redirects: 3 # 获取失败 最大重定向次数
+    lettuce:
+      pool:
+        max-active: 1000  #连接池最大连接数（使用负值表示没有限制）
+        max-idle: 10 # 连接池中的最大空闲连接
+        min-idle: 5 # 连接池中的最小空闲连接
+        max-wait: -1 # 连接池最大阻塞等待时间（使用负值表示没有限制）
+#
+#mybatis:
+#  typeAliasesPackage: com.company.forward.domain.rest.*
+#  mapperLocations: classpath*:mapper/**.xml
+#  configuration: mybatis-config.xml
+
+
+#开启日志,默认为false
+tx-lcn:
+  logger:
+    driver-class-name: ${spring.datasource.driver-class-name}
+    jdbc-url: ${spring.datasource.url}
+    password: ${spring.datasource.password}
+    username: ${spring.datasource.username}
+  manager:
+    # TM后台登陆密码，默认值为codingapi
+    admin-key: codingapi
+    # 事务处理并发等级. 默认为机器逻辑核心数5倍
+    concurrent-level: 160
+    # 分布式事务锁超时时间 默认为-1，当-1时会用tx-lcn.manager.dtx-time的时间
+    dtx-lock-time: ${tx-lcn.manager.dtx-time}
+    #  分布式事务执行总时间(ms). 默认为36000
+    dtx-time: 8000
+    # 事务异常通知（任何http协议地址。未指定协议时，为TM提供内置功能接口）。默认是邮件通知
+    ex-url: /provider/email-to/***@**.com
+    # 异常回调开关。开启时请制定ex-url
+    ex-url-enabled: false
+    # 心跳检测时间(ms). 默认为 300000
+    heart-time: 300000
+    # TM监听IP. 默认为 127.0.0.1
+    host: 127.0.0.1
+    port: 8070
+    #  雪花算法的sequence位长度，默认为12位.
+    seq-len: 12
+  message:
+    netty:
+      # 参数延迟删除时间单位ms  默认为dtx-time值
+      attr-delay-time: ${tx-lcn.manager.dtx-time}

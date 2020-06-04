@@ -1,6 +1,6 @@
 package com.company.forward.study.rest.feign;
 
-import org.company.forward.domain.basic.BasicErrorCode;
+import org.company.forward.domain.enums.BasicErrorCode;
 import org.company.forward.domain.basic.BasicResponse;
 import org.springframework.stereotype.Component;
 

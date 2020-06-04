@@ -1,7 +1,7 @@
 package org.company.forward.study.feignserver.controller;
 
 import com.alibaba.fastjson.JSON;
-import org.company.forward.domain.basic.BasicErrorCode;
+import org.company.forward.domain.enums.BasicErrorCode;
 import org.company.forward.domain.basic.BasicResponse;
 import org.company.forward.domain.rest.EpAlipayBillFlow;
 import org.company.forward.study.feignserver.service.EpAlipayBillFlowServer;

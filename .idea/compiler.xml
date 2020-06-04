@@ -8,12 +8,15 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="study-feignserver" />
-        <module name="study-rest" />
-        <module name="study-zuul" />
-        <module name="study-domain" />
-        <module name="study-eureka" />
-        <module name="study-util" />
         <module name="study-kafka" />
+        <module name="study-quartz" />
+        <module name="study-zuul" />
+        <module name="study-eureka" />
+        <module name="study-other-util" />
+        <module name="study-rest" />
+        <module name="study-util" />
+        <module name="study-domain" />
+        <module name="study-lcntm" />
         <module name="study-db" />
       </profile>
     </annotationProcessing>
@@ -30,6 +33,9 @@
       <module name="study-eureka-rb" options="-parameters" />
       <module name="study-feignserver" options="-parameters" />
       <module name="study-kafka" options="-parameters" />
+      <module name="study-lcntm" options="-parameters" />
+      <module name="study-other-util" options="" />
+      <module name="study-quartz" options="-parameters" />
       <module name="study-rest" options="-parameters" />
       <module name="study-util" options="" />
       <module name="study-zuul" options="-parameters" />

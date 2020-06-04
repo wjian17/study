@@ -10,6 +10,16 @@ import java.util.*;
  */
  public class CollectionAnalizy {
 
+     private String analizy;
+
+    public String getAnalizy() {
+        return analizy;
+    }
+
+    public void setAnalizy(String analizy) {
+        this.analizy = analizy;
+    }
+
     @Test
     /**
      * Byte、Short、Integer、Long、Character、Boolean；这5种包装类默认创建了数值 [-128，127]

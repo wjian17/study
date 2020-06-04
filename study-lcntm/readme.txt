@@ -1,0 +1,4 @@
+1、数据库表结构必须为innoDB
+2、在启动类上一定要加入@EnableDistributedTransaction
+3、当调用其他服务时@LcnTransaction注解不能加入其他参数
+4、被调用的服务@LcnTransaction注解一定要加入propagation = DTXPropagation.SUPPORTS这个配置
