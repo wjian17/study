@@ -9,12 +9,15 @@
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
     <modules>
+        <module>study-domain</module>
+        <module>study-db</module>
+        <module>study-util</module>
+        <module>study-other-util</module>
         <module>study-rest</module>
         <module>study-eureka</module>
         <module>study-feignserver</module>
         <module>study-kafka</module>
         <module>study-quartz</module>
-        <module>study-other-util</module>
         <module>study-lcntm</module>
         <module>study-zuul</module>
     </modules>
