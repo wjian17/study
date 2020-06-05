@@ -4,6 +4,7 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.scheduling.annotation.Scheduled;
 
 import java.text.SimpleDateFormat;
+import java.util.Date;
 
 /**
  * @author wangjian
