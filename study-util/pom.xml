@@ -8,6 +8,7 @@
     <groupId>org.company.forward</groupId>
     <artifactId>study-util</artifactId>
     <version>0.0.1-SNAPSHOT</version>
+    <packaging>jar</packaging>
     <dependencies>
         <dependency>
             <groupId>com.auth0</groupId>
@@ -24,7 +25,6 @@
         </dependency>
 
     </dependencies>
-    <packaging>jar</packaging>
 
     <build>
         <plugins>
@@ -34,6 +34,20 @@
                 <version>2.3.0.RELEASE</version>
             </plugin>
         </plugins>
+
     </build>
+
+    <distributionManagement>
+        <repository>
+            <id>maven-releases</id>
+            <name>Nexus Release Repository</name>
+            <url>http://192.168.199.130:8081/repository/maven-releases/</url>
+        </repository>
+        <snapshotRepository>
+            <id>maven-snapshots</id>
+            <name>Nexus Snapshot Repository</name>
+            <url>http://192.168.199.130:8081/repository/maven-snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
 
 </project>
