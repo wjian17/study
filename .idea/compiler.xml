@@ -8,16 +8,16 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="study-feignserver" />
-        <module name="study-kafka" />
-        <module name="study-quartz" />
         <module name="study-zuul" />
+        <module name="study-db" />
+        <module name="study-domain" />
         <module name="study-eureka" />
         <module name="study-other-util" />
         <module name="study-rest" />
         <module name="study-util" />
-        <module name="study-domain" />
+        <module name="study-kafka" />
         <module name="study-lcntm" />
-        <module name="study-db" />
+        <module name="study-quartz" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
