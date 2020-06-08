@@ -1,5 +1,5 @@
 /**
- * Copyright 2018-2020 wangjian & fengshuonan (https://gitee.com/wangjian)
+ * Copyright 2018-2020 wangjian & wangjian (https://gitee.com/wangjian)
  * <p>
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,7 +21,7 @@ import java.io.Serializable;
 import java.util.*;
 
 /**
- * @author fengshuonan
+ * @author wangjian
  * @Description 菜单的节点
  * @date 2016年12月6日 上午11:34:17
  */

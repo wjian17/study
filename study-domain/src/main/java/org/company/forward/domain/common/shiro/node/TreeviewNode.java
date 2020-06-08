@@ -1,5 +1,5 @@
 /**
- * Copyright 2018-2020 wangjian & fengshuonan (https://gitee.com/wangjian)
+ * Copyright 2018-2020 wangjian & wangjian (https://gitee.com/wangjian)
  * <p>
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -23,7 +23,7 @@ import java.util.List;
 /**
  * jquery ztree 插件的节点
  *
- * @author fengshuonan
+ * @author wangjian
  * @date 2017年2月17日 下午8:25:14
  */
 @Data

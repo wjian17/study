@@ -1,7 +1,7 @@
 package org.company.forward.domain.common.shiro.node;
 
 /**
- * Copyright 2018-2020 wangjian & fengshuonan (https://gitee.com/wangjian)
+ * Copyright 2018-2020 wangjian & wangjian (https://gitee.com/wangjian)
  * <p>
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,7 +21,7 @@ import lombok.Data;
 /**
  * jquery ztree 插件的节点
  *
- * @author fengshuonan
+ * @author wangjian
  * @date 2017年2月17日 下午8:25:14
  */
 @Data
@@ -64,7 +64,7 @@ import lombok.Data;
     /**
      * 创建ztree的父级节点
      *
-     * @author fengshuonan
+     * @author wangjian
      * @Date 2018/12/23 4:51 PM
      */
     public static ZTreeNode createParent() {
