@@ -8,10 +8,12 @@ import org.cmp.app.remote.AppRemoteService1;
 import org.cmp.app.remote.AppRemoteService2;
 import org.cmp.core.resp.CmpResponse;
 import org.cmp.rest.adapter.RestAdapter;
+import org.cmp.rest.dto.RestDispatcher;
 import org.cmp.rest.service.remote.RestRemoteService1;
 import org.cmp.rest.service.remote.RestRemoteService2;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -47,7 +49,7 @@ public class AppFeignTestController {
 
     @PostMapping("/testServer3")
     @ApiOperation("测试：testServer3")
-    public CmpResponse testServer3(){
-        return restAdapter.test(MapUtil.newHashMap(0));
+    public CmpResponse testServer3(@RequestBody RestDispatcher restDispatcher){
+        return restAdapter.test(restDispatcher);
     }
 }

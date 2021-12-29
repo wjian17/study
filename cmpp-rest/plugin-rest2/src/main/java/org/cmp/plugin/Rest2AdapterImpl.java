@@ -2,6 +2,7 @@ package org.cmp.plugin;
 
 import org.cmp.core.adapter.dto.DispatcherContext;
 import org.cmp.core.resp.CmpResponse;
+import org.cmp.core.resp.GetCmpResponse;
 import org.cmp.rest.adapter.RestAdapter;
 import org.cmp.rest.dto.RestDispatcher;
 import org.springframework.stereotype.Service;
@@ -22,7 +23,7 @@ public class Rest2AdapterImpl implements RestAdapter {
     }
 
     @Override
-    public CmpResponse test(Map map) {
-        return null;
+    public CmpResponse test(RestDispatcher restDispatcher) {
+        return new GetCmpResponse<String>("Rest2AdapterImpl");
     }
 }

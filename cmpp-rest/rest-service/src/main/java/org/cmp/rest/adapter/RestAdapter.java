@@ -15,5 +15,5 @@ import java.util.Map;
 @AdapterMgr
 public interface RestAdapter extends BasicAdapter<RestDispatcher>, DispatcherAdapter {
 
-    CmpResponse test(Map map);
+    CmpResponse test(RestDispatcher restDispatcher);
 }
