@@ -1,11 +1,8 @@
-target/
-logs/
-log/
+HELP.md
+**/target/
 !.mvn/wrapper/maven-wrapper.jar
-.DS_Store
-release.properties
-*.releaseBackup
-*.log
+!**/src/main/**
+!**/src/test/**
 
 ### STS ###
 .apt_generated
@@ -14,18 +11,26 @@ release.properties
 .project
 .settings
 .springBeans
+.sts4-cache
 
 ### IntelliJ IDEA ###
-.idea/
+.idea
 *.iws
 *.iml
 *.ipr
-*.log
+mvnw.cmd
+mvnw
 
 ### NetBeans ###
-nbproject/private/
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
 build/
-nbbuild/
-dist/
-nbdist/
-.nb-gradle/
+
+### VS Code ###
+.vscode/
+*/.mvn/
+*/mvnw
+*/mvnw.cmd
