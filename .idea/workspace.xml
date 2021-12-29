@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="64d28694-b0e6-4a08-b364-04523cd6f04e" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="AnnotationType" />
+        <option value="Class" />
+        <option value="Interface" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="E:\software\maven-resp" />
+        <option name="mavenHome" value="$PROJECT_DIR$/../software/apache-maven-3.5.4" />
+        <option name="userSettingsFile" value="E:\software\apache-maven-3.5.4\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+        <option name="jdkForImporter" value="1.8" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="1" />
+  </component>
+  <component name="ProjectId" id="22fTk6sKHQlftzjcBgyBprZJxcX" />
+  <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="jdk.selected.JAVA_MODULE" value="1.8" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/cmpc-security/src" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/cmpp-rest/rest/src/main/resources/bootstrap.yml" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\study\cmpc-security\src" />
+      <recent name="E:\study" />
+      <recent name="E:\study\cmpp-rest\rest\src\main" />
+      <recent name="E:\study\cmpp-app\app-service\src\main\java\org\cmp\app\controller\service\remote" />
+      <recent name="E:\study\cmpc-core" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.com.plugin" />
+      <recent name="org.cmp.rest.controller" />
+      <recent name="org.cmp.rest.service.impl" />
+      <recent name="org.cmp.rest.remote" />
+      <recent name="org.cmp.app.remote" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\study\cmpp-rest" />
+      <recent name="E:\study\cmpp-config" />
+      <recent name="E:\study\cmpp-register" />
+    </key>
+  </component>
+  <component name="RestServicesNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="Found 12 services " type="fcff1e1b:RestServiceStructure$RootNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.RestApplication">
+    <configuration name="AppApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="app" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.cmp.app.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="org.cmp.app.AppApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GateWayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="gateway" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="org.cmp.gateway.GateWayApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RestApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="rest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.com.rest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="org.com.rest.RestApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Spring Boot.GateWayApplication" />
+      <item itemvalue="Spring Boot.AppApplication" />
+      <item itemvalue="Spring Boot.RestApplication" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.RestApplication" />
+        <item itemvalue="Spring Boot.AppApplication" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="64d28694-b0e6-4a08-b364-04523cd6f04e" name="Default Changelist" comment="" />
+      <created>1640227781738</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1640227781738</updated>
+      <workItem from="1640227782888" duration="3214000" />
+      <workItem from="1640231052513" duration="5418000" />
+      <workItem from="1640324765137" duration="9012000" />
+      <workItem from="1640335416753" duration="8625000" />
+      <workItem from="1640567074988" duration="22760000" />
+      <workItem from="1640593611165" duration="788000" />
+      <workItem from="1640594424782" duration="994000" />
+      <workItem from="1640595444085" duration="1007000" />
+      <workItem from="1640596478978" duration="5274000" />
+      <workItem from="1640654055083" duration="25804000" />
+      <workItem from="1640740469660" duration="5145000" />
+      <workItem from="1640745687543" duration="7040000" />
+      <workItem from="1640756733656" duration="8621000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint type="java-line">
+          <url>jar://$PROJECT_DIR$/../software/maven-resp/org/springframework/cloud/spring-cloud-openfeign-core/2.1.5.RELEASE/spring-cloud-openfeign-core-2.1.5.RELEASE-sources.jar!/org/springframework/cloud/openfeign/ribbon/FeignRibbonClientAutoConfiguration.java</url>
+          <line>52</line>
+          <option name="timeStamp" value="67" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$PROJECT_DIR$/../software/maven-resp/org/springframework/cloud/spring-cloud-openfeign-core/2.1.5.RELEASE/spring-cloud-openfeign-core-2.1.5.RELEASE-sources.jar!/org/springframework/cloud/openfeign/ribbon/HttpClientFeignLoadBalancedConfiguration.java</url>
+          <line>49</line>
+          <option name="timeStamp" value="68" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$PROJECT_DIR$/../software/maven-resp/org/springframework/cloud/spring-cloud-openfeign-core/2.1.5.RELEASE/spring-cloud-openfeign-core-2.1.5.RELEASE-sources.jar!/org/springframework/cloud/openfeign/ribbon/OkHttpFeignLoadBalancedConfiguration.java</url>
+          <line>42</line>
+          <option name="timeStamp" value="69" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$PROJECT_DIR$/../software/maven-resp/org/springframework/cloud/spring-cloud-openfeign-core/2.1.5.RELEASE/spring-cloud-openfeign-core-2.1.5.RELEASE-sources.jar!/org/springframework/cloud/openfeign/ribbon/HttpClientFeignLoadBalancedConfiguration.java</url>
+          <line>55</line>
+          <option name="timeStamp" value="71" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$PROJECT_DIR$/../software/maven-resp/org/springframework/cloud/spring-cloud-openfeign-core/2.1.5.RELEASE/spring-cloud-openfeign-core-2.1.5.RELEASE-sources.jar!/org/springframework/cloud/openfeign/ribbon/FeignRibbonClientAutoConfiguration.java</url>
+          <line>60</line>
+          <option name="timeStamp" value="73" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$PROJECT_DIR$/../software/maven-resp/org/springframework/cloud/spring-cloud-openfeign-core/2.1.5.RELEASE/spring-cloud-openfeign-core-2.1.5.RELEASE-sources.jar!/org/springframework/cloud/openfeign/ribbon/FeignRibbonClientAutoConfiguration.java</url>
+          <line>75</line>
+          <option name="timeStamp" value="74" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$PROJECT_DIR$/../software/maven-resp/org/springframework/cloud/spring-cloud-openfeign-core/2.1.5.RELEASE/spring-cloud-openfeign-core-2.1.5.RELEASE-sources.jar!/org/springframework/cloud/openfeign/ribbon/OkHttpFeignLoadBalancedConfiguration.java</url>
+          <line>48</line>
+          <option name="timeStamp" value="75" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$PROJECT_DIR$/../software/maven-resp/org/springframework/cloud/spring-cloud-openfeign-core/2.1.5.RELEASE/spring-cloud-openfeign-core-2.1.5.RELEASE-sources.jar!/org/springframework/cloud/openfeign/ribbon/DefaultFeignLoadBalancedConfiguration.java</url>
+          <line>35</line>
+          <option name="timeStamp" value="79" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$PROJECT_DIR$/../software/maven-resp/org/springframework/cloud/spring-cloud-openfeign-core/2.1.5.RELEASE/spring-cloud-openfeign-core-2.1.5.RELEASE-sources.jar!/org/springframework/cloud/openfeign/DefaultTargeter.java</url>
+          <line>29</line>
+          <option name="timeStamp" value="86" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$PROJECT_DIR$/../software/maven-resp/org/springframework/cloud/spring-cloud-openfeign-core/2.1.5.RELEASE/spring-cloud-openfeign-core-2.1.5.RELEASE-sources.jar!/org/springframework/cloud/openfeign/HystrixTargeter.java</url>
+          <line>36</line>
+          <option name="timeStamp" value="87" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$PROJECT_DIR$/../software/maven-resp/org/springframework/cloud/spring-cloud-openfeign-core/2.1.5.RELEASE/spring-cloud-openfeign-core-2.1.5.RELEASE-sources.jar!/org/springframework/cloud/openfeign/FeignClientFactoryBean.java</url>
+          <line>101</line>
+          <option name="timeStamp" value="89" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$PROJECT_DIR$/../software/maven-resp/org/springframework/cloud/spring-cloud-openfeign-core/2.1.5.RELEASE/spring-cloud-openfeign-core-2.1.5.RELEASE-sources.jar!/org/springframework/cloud/openfeign/FeignClientFactoryBean.java</url>
+          <line>256</line>
+          <option name="timeStamp" value="91" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$PROJECT_DIR$/../software/maven-resp/org/springframework/cloud/spring-cloud-openfeign-core/2.1.5.RELEASE/spring-cloud-openfeign-core-2.1.5.RELEASE-sources.jar!/org/springframework/cloud/openfeign/FeignClientFactoryBean.java</url>
+          <line>283</line>
+          <option name="timeStamp" value="93" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$PROJECT_DIR$/../software/maven-resp/org/springframework/cloud/spring-cloud-openfeign-core/2.1.5.RELEASE/spring-cloud-openfeign-core-2.1.5.RELEASE-sources.jar!/org/springframework/cloud/openfeign/FeignAutoConfiguration.java</url>
+          <line>72</line>
+          <option name="timeStamp" value="95" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$PROJECT_DIR$/../software/maven-resp/org/springframework/cloud/spring-cloud-sleuth-core/2.1.7.RELEASE/spring-cloud-sleuth-core-2.1.7.RELEASE-sources.jar!/org/springframework/cloud/sleuth/instrument/web/client/feign/TraceFeignContext.java</url>
+          <line>52</line>
+          <option name="timeStamp" value="104" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$PROJECT_DIR$/../software/maven-resp/org/springframework/cloud/spring-cloud-sleuth-core/2.1.7.RELEASE/spring-cloud-sleuth-core-2.1.7.RELEASE-sources.jar!/org/springframework/cloud/sleuth/instrument/web/client/feign/FeignContextBeanPostProcessor.java</url>
+          <line>47</line>
+          <option name="timeStamp" value="106" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$PROJECT_DIR$/../software/maven-resp/io/github/openfeign/feign-core/10.4.0/feign-core-10.4.0-sources.jar!/feign/ReflectiveFeign.java</url>
+          <line>51</line>
+          <option name="timeStamp" value="109" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$PROJECT_DIR$/../software/maven-resp/org/springframework/cloud/spring-cloud-openfeign-core/2.1.5.RELEASE/spring-cloud-openfeign-core-2.1.5.RELEASE-sources.jar!/org/springframework/cloud/openfeign/FeignClientFactoryBean.java</url>
+          <line>95</line>
+          <option name="timeStamp" value="112" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$PROJECT_DIR$/../software/maven-resp/org/springframework/cloud/spring-cloud-openfeign-core/2.1.5.RELEASE/spring-cloud-openfeign-core-2.1.5.RELEASE-sources.jar!/org/springframework/cloud/openfeign/FeignClientFactoryBean.java</url>
+          <line>90</line>
+          <option name="timeStamp" value="114" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$PROJECT_DIR$/../software/maven-resp/org/springframework/cloud/spring-cloud-context/2.1.5.RELEASE/spring-cloud-context-2.1.5.RELEASE-sources.jar!/org/springframework/cloud/context/named/NamedContextFactory.java</url>
+          <line>108</line>
+          <option name="timeStamp" value="119" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$PROJECT_DIR$/../software/maven-resp/org/springframework/cloud/spring-cloud-sleuth-core/2.1.7.RELEASE/spring-cloud-sleuth-core-2.1.7.RELEASE-sources.jar!/org/springframework/cloud/sleuth/instrument/web/client/feign/TraceFeignClientAutoConfiguration.java</url>
+          <line>60</line>
+          <option name="timeStamp" value="122" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$PROJECT_DIR$/../software/maven-resp/org/springframework/cloud/spring-cloud-sleuth-core/2.1.7.RELEASE/spring-cloud-sleuth-core-2.1.7.RELEASE-sources.jar!/org/springframework/cloud/sleuth/instrument/web/client/feign/TraceFeignClientAutoConfiguration.java</url>
+          <line>68</line>
+          <option name="timeStamp" value="135" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$PROJECT_DIR$/../software/maven-resp/org/springframework/cloud/spring-cloud-openfeign-core/2.1.5.RELEASE/spring-cloud-openfeign-core-2.1.5.RELEASE-sources.jar!/org/springframework/cloud/openfeign/FeignClientFactoryBean.java</url>
+          <line>266</line>
+          <option name="timeStamp" value="136" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$PROJECT_DIR$/../software/maven-resp/io/github/openfeign/feign-core/10.4.0/feign-core-10.4.0-sources.jar!/feign/ReflectiveFeign.java</url>
+          <line>73</line>
+          <option name="timeStamp" value="137" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$PROJECT_DIR$/../software/maven-resp/io/github/openfeign/feign-core/10.4.0/feign-core-10.4.0-sources.jar!/feign/ReflectiveFeign.java</url>
+          <line>66</line>
+          <option name="timeStamp" value="138" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$PROJECT_DIR$/../software/maven-resp/org/springframework/cloud/spring-cloud-openfeign-core/2.1.5.RELEASE/spring-cloud-openfeign-core-2.1.5.RELEASE-sources.jar!/org/springframework/cloud/openfeign/FeignClientFactoryBean.java</url>
+          <line>234</line>
+          <option name="timeStamp" value="141" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$PROJECT_DIR$/../software/maven-resp/org/springframework/cloud/spring-cloud-sleuth-core/2.1.7.RELEASE/spring-cloud-sleuth-core-2.1.7.RELEASE-sources.jar!/org/springframework/cloud/sleuth/instrument/web/client/feign/TraceFeignObjectWrapper.java</url>
+          <line>68</line>
+          <option name="timeStamp" value="142" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$PROJECT_DIR$/../software/maven-resp/org/springframework/cloud/spring-cloud-sleuth-core/2.1.7.RELEASE/spring-cloud-sleuth-core-2.1.7.RELEASE-sources.jar!/org/springframework/cloud/sleuth/instrument/web/client/feign/TraceFeignObjectWrapper.java</url>
+          <line>75</line>
+          <option name="timeStamp" value="143" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$PROJECT_DIR$/../software/maven-resp/org/springframework/cloud/spring-cloud-openfeign-core/2.1.5.RELEASE/spring-cloud-openfeign-core-2.1.5.RELEASE-sources.jar!/org/springframework/cloud/openfeign/FeignClientFactoryBean.java</url>
+          <line>233</line>
+          <option name="timeStamp" value="144" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$PROJECT_DIR$/../software/maven-resp/io/github/openfeign/feign-core/10.4.0/feign-core-10.4.0-sources.jar!/feign/Feign.java</url>
+          <line>250</line>
+          <option name="timeStamp" value="146" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$PROJECT_DIR$/../software/maven-resp/io/github/openfeign/feign-hystrix/10.4.0/feign-hystrix-10.4.0.jar!/feign/hystrix/HystrixInvocationHandler.class</url>
+          <line>69</line>
+          <option name="timeStamp" value="151" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$PROJECT_DIR$/../software/maven-resp/io/github/openfeign/feign-hystrix/10.4.0/feign-hystrix-10.4.0-sources.jar!/feign/hystrix/HystrixInvocationHandler.java</url>
+          <line>89</line>
+          <option name="timeStamp" value="152" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$PROJECT_DIR$/../software/maven-resp/io/github/openfeign/feign-core/10.4.0/feign-core-10.4.0-sources.jar!/feign/ReflectiveFeign.java</url>
+          <line>88</line>
+          <option name="timeStamp" value="153" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$PROJECT_DIR$/../software/maven-resp/io/github/openfeign/feign-core/10.4.0/feign-core-10.4.0-sources.jar!/feign/ReflectiveFeign.java</url>
+          <line>63</line>
+          <option name="timeStamp" value="156" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$PROJECT_DIR$/../software/maven-resp/io/github/openfeign/feign-hystrix/10.4.0/feign-hystrix-10.4.0-sources.jar!/feign/hystrix/HystrixInvocationHandler.java</url>
+          <line>108</line>
+          <option name="timeStamp" value="158" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$PROJECT_DIR$/../software/maven-resp/org/springframework/cloud/spring-cloud-sleuth-core/2.1.7.RELEASE/spring-cloud-sleuth-core-2.1.7.RELEASE-sources.jar!/org/springframework/cloud/sleuth/instrument/web/client/feign/TraceFeignClientAutoConfiguration.java</url>
+          <line>88</line>
+          <option name="timeStamp" value="160" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$PROJECT_DIR$/../software/maven-resp/org/springframework/cloud/spring-cloud-context/2.1.5.RELEASE/spring-cloud-context-2.1.5.RELEASE-sources.jar!/org/springframework/cloud/context/named/NamedContextFactory.java</url>
+          <line>100</line>
+          <option name="timeStamp" value="162" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$PROJECT_DIR$/../software/maven-resp/org/springframework/cloud/spring-cloud-openfeign-core/2.1.5.RELEASE/spring-cloud-openfeign-core-2.1.5.RELEASE-sources.jar!/org/springframework/cloud/openfeign/FeignClientFactoryBean.java</url>
+          <line>237</line>
+          <option name="timeStamp" value="163" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$PROJECT_DIR$/../software/maven-resp/org/springframework/cloud/spring-cloud-context/2.1.5.RELEASE/spring-cloud-context-2.1.5.RELEASE-sources.jar!/org/springframework/cloud/context/named/NamedContextFactory.java</url>
+          <line>147</line>
+          <option name="timeStamp" value="165" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$PROJECT_DIR$/../software/maven-resp/io/github/openfeign/feign-hystrix/10.4.0/feign-hystrix-10.4.0-sources.jar!/feign/hystrix/HystrixFeign.java</url>
+          <line>145</line>
+          <option name="timeStamp" value="167" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$PROJECT_DIR$/../software/maven-resp/io/github/openfeign/feign-hystrix/10.4.0/feign-hystrix-10.4.0.jar!/feign/hystrix/HystrixFeign.class</url>
+          <line>80</line>
+          <option name="timeStamp" value="168" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/cmpp-rest/plugin-rest1/src/main/java/org/cmp/plugin/Rest1AdapterImpl.java</url>
+          <line>21</line>
+          <option name="timeStamp" value="193" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/cmpp-rest/plugin-rest2/src/main/java/org/cmp/plugin/Rest2AdapterImpl.java</url>
+          <line>25</line>
+          <option name="timeStamp" value="194" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$PROJECT_DIR$/../software/maven-resp/com/zaxxer/HikariCP/3.2.0/HikariCP-3.2.0-sources.jar!/com/zaxxer/hikari/HikariDataSource.java</url>
+          <line>76</line>
+          <option name="timeStamp" value="197" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$PROJECT_DIR$/../software/maven-resp/org/springframework/boot/spring-boot-autoconfigure/1.5.13.RELEASE/spring-boot-autoconfigure-1.5.13.RELEASE-sources.jar!/org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration.java</url>
+          <line>41</line>
+          <option name="timeStamp" value="199" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/cmpc-core/src/main/java/org/cmp/core/factorybean/AdapterFactoryBean.java</url>
+          <line>57</line>
+          <option name="timeStamp" value="207" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/cmpc-core/src/main/java/org/cmp/core/factorybean/AdapterFactoryBean.java</url>
+          <line>56</line>
+          <option name="timeStamp" value="208" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/cmpc-core/src/main/java/org/cmp/core/factorybean/AdapterFactoryBean.java</url>
+          <line>59</line>
+          <option name="timeStamp" value="209" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/cmpc-core/src/main/java/org/cmp/core/factorybean/AdapterFactoryBean.java</url>
+          <line>61</line>
+          <option name="timeStamp" value="210" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="SpringBootApplicationConfigurationType">
+        <watch expression="applicationContext.getBean()" language="JAVA" />
+        <watch expression="resources" />
+      </configuration>
+    </watches-manager>
+  </component>
+</project>

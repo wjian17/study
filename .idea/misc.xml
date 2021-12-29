@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="JavaScriptSettings">
+    <option name="languageLevel" value="ES6" />
+  </component>
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/register/pom.xml" />
+        <option value="$PROJECT_DIR$/config/pom.xml" />
+        <option value="$PROJECT_DIR$/rest/pom.xml" />
+        <option value="$PROJECT_DIR$/core/pom.xml" />
+        <option value="$PROJECT_DIR$/cmpc-parent/pom.xml" />
+        <option value="$PROJECT_DIR$/rest-service/pom.xml" />
+        <option value="$PROJECT_DIR$/rest-feign-api/pom.xml" />
+        <option value="$PROJECT_DIR$/cmpp-rest/rest-feign-api/pom.xml" />
+        <option value="$PROJECT_DIR$/cmpp-rest/rest-service/pom.xml" />
+        <option value="$PROJECT_DIR$/cmpp-gateway/gateway/pom.xml" />
+        <option value="$PROJECT_DIR$/cmpp-gateway/gateway-service/pom.xml" />
+        <option value="$PROJECT_DIR$/cmpc-remote-parent/pom.xml" />
+        <option value="$PROJECT_DIR$/cmpc-core/pom.xml" />
+        <option value="$PROJECT_DIR$/cmpp-app/app-feign-api/pom.xml" />
+        <option value="$PROJECT_DIR$/cmpp-app/app-service/pom.xml" />
+        <option value="$PROJECT_DIR$/cmpp-app/app/pom.xml" />
+        <option value="$PROJECT_DIR$/cmpp-rest/rest/pom.xml" />
+        <option value="$PROJECT_DIR$/plugin-rest1/pom.xml" />
+        <option value="$PROJECT_DIR$/plugin-rest2/pom.xml" />
+        <option value="$PROJECT_DIR$/cmpp-rest/plugin-rest1/pom.xml" />
+        <option value="$PROJECT_DIR$/cmpp-rest/plugin-rest2/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" project-jdk-name="1.8" project-jdk-type="JavaSDK" />
+  <component name="ZooKeeperConfig">
+    <option name="host" value="192.168.199.130" />
+    <option name="port" value="2181" />
+    <option name="charset" value="UTF-8" />
+    <option name="whitePaths" value="" />
+    <option name="enabled" value="true" />
+    <option name="tooltip" value="true" />
+  </component>
+</project>

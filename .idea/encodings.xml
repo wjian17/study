@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/cmpc-core" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cmpc-parent" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cmpc-remote-parent" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cmpp-app/app" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cmpp-app/app-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cmpp-gateway/gateway" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cmpp-rest/plugin-rest1" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cmpp-rest/plugin-rest2" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cmpp-rest/rest" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cmpp-rest/rest-feign-api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cmpp-rest/rest-service" charset="UTF-8" />
+  </component>
+</project>

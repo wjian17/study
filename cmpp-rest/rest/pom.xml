@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <artifactId>cmpc-parent</artifactId>
+        <groupId>org.cmp.parent</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+
+    <groupId>org.cmp.app</groupId>
+    <artifactId>rest</artifactId>
+    <version>${cmpp-version}</version>
+
+    <properties>
+        <cmpp-version>1.0-SNAPSHOT</cmpp-version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.cmp.rest</groupId>
+            <artifactId>rest-service</artifactId>
+            <version>${cmpp-version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.cmp.rest</groupId>
+            <artifactId>rest-feign-api</artifactId>
+            <version>${cmpp-version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.com.plugin</groupId>
+            <artifactId>plugin-rest1</artifactId>
+            <version>${cmpp-version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.com.plugin</groupId>
+            <artifactId>plugin-rest2</artifactId>
+            <version>${cmpp-version}</version>
+        </dependency>
+
+    </dependencies>
+</project>

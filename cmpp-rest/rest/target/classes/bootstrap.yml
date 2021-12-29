@@ -1,0 +1,77 @@
+server:
+  servlet:
+    context-path: /${spring.application.name}
+  port: 8080
+
+spring:
+  profiles:
+    active: local
+  application:
+    name: rest
+  security:
+    user:
+      name: cmp
+      password: cmp
+  cloud:
+    nacos:
+      config:
+        server-addr: 127.0.0.1:8848
+        prefix: ${spring.application.name}
+        file-extension: yaml
+        group: config
+        namespace: d3795939-aefc-4d4e-ae01-6914bcefec34
+        shared-configs:
+          - data-id: application-${spring.profiles.active}.yaml
+            refresh: true
+            group: config
+      discovery:
+        server-addr: 127.0.0.1:8848
+        group: config
+        namespace: d3795939-aefc-4d4e-ae01-6914bcefec34
+  flyway:
+    enabled: false
+  #management:
+  #  endpoints:
+  #    web:
+  #      exposure:
+  #        include: *
+
+  #    config:
+  #      fail-fast: true
+  #      name: ${spring.application.name}
+  #      profile: ${spring.profiles.active}
+  #      discovery:
+  #        enabled: true
+  #        service-id: config
+
+
+config:
+  oauth-resource:
+    enable: true
+
+
+
+info:
+  app:
+    name: Rest Service
+    description: rest服务
+
+
+rest:
+  ribbon:
+    # 请求连接时间。
+    ConnectTimeout: 6000
+    # 请求处理时间。
+    ReadTimeout: 8000
+    # 对所有操作都进行重试。get post
+    OkToRetryOnAllOperations: false
+    # 切换实例的重试次数。不包括首次调
+    MaxAutoRetriesNextServer: 1
+    # 对当前实例的重试次数
+    MaxAutoRetries: 1
+
+feign:
+  okHttp:
+    enable: false
+  hystrix:
+    enabled: false

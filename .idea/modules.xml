@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/cmpp-app/app/app.iml" filepath="$PROJECT_DIR$/cmpp-app/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cmpp-app/app-feign-api/app-feign-api.iml" filepath="$PROJECT_DIR$/cmpp-app/app-feign-api/app-feign-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cmpp-app/app-service/app-service.iml" filepath="$PROJECT_DIR$/cmpp-app/app-service/app-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cmpc-core/cmpc-core.iml" filepath="$PROJECT_DIR$/cmpc-core/cmpc-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cmpc-parent/cmpc-parent.iml" filepath="$PROJECT_DIR$/cmpc-parent/cmpc-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cmpc-remote-parent/cmpc-remote-parent.iml" filepath="$PROJECT_DIR$/cmpc-remote-parent/cmpc-remote-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cmpp-gateway/gateway/gateway.iml" filepath="$PROJECT_DIR$/cmpp-gateway/gateway/gateway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cmpp-gateway/gateway-service/gateway-service.iml" filepath="$PROJECT_DIR$/cmpp-gateway/gateway-service/gateway-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cmpp-rest/plugin-rest1/plugin-rest1.iml" filepath="$PROJECT_DIR$/cmpp-rest/plugin-rest1/plugin-rest1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cmpp-rest/plugin-rest2/plugin-rest2.iml" filepath="$PROJECT_DIR$/cmpp-rest/plugin-rest2/plugin-rest2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cmpp-rest/rest/rest.iml" filepath="$PROJECT_DIR$/cmpp-rest/rest/rest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cmpp-rest/rest-feign-api/rest-feign-api.iml" filepath="$PROJECT_DIR$/cmpp-rest/rest-feign-api/rest-feign-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cmpp-rest/rest-service/rest-service.iml" filepath="$PROJECT_DIR$/cmpp-rest/rest-service/rest-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/study.iml" filepath="$PROJECT_DIR$/.idea/study.iml" />
+    </modules>
+  </component>
+</project>
