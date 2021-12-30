@@ -28,8 +28,7 @@ spring:
         server-addr: 127.0.0.1:8848
         group: config
         namespace: d3795939-aefc-4d4e-ae01-6914bcefec34
-  flyway:
-    enabled: false
+
   #management:
   #  endpoints:
   #    web:

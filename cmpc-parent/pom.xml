@@ -27,7 +27,7 @@
 
     <groupId>org.cmp.parent</groupId>
     <artifactId>cmpc-parent</artifactId>
-    <version>${cmpc-version}</version>
+    <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
 
