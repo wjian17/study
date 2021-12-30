@@ -9,7 +9,7 @@
     <version>${cmpc-version}</version>
 
     <properties>
-        <cmpc-version>1.0-RELEASES</cmpc-version>
+        <cmpc-version>1.0-SNAPSHOT</cmpc-version>
         <poi.version>3.17</poi.version>
         <guava.version>20.0</guava.version>
         <hutool.version>5.0.0</hutool.version>
