@@ -1,9 +1,7 @@
 package org.cmp.app.controller.config;
 
 import org.cmp.core.resp.CmpResponse;
-import org.cmp.rest.service.remote.RestRemoteService1;
-import org.springframework.context.annotation.Primary;
-import org.springframework.stereotype.Service;
+import org.cmp.rest.remote.RestRemoteService1;
 
 /**
  * @author: wangjian
@@ -14,7 +12,7 @@ import org.springframework.stereotype.Service;
 public class RestRemoteService1SelfImpl implements RestRemoteService1 {
     @Override
     public CmpResponse service1_1() {
-        return null;
+        return new CmpResponse();
     }
 
     @Override

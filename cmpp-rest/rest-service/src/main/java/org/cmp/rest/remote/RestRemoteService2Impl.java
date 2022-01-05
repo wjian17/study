@@ -1,4 +1,4 @@
-package org.cmp.rest.service.remote;
+package org.cmp.rest.remote;
 
 import org.cmp.core.resp.CmpResponse;
 import org.springframework.web.bind.annotation.PostMapping;

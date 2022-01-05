@@ -1,6 +1,5 @@
 package org.cmp.rest.controller;
 
-import cn.hutool.core.map.MapUtil;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
@@ -9,8 +8,6 @@ import org.cmp.app.remote.AppRemoteService2;
 import org.cmp.core.resp.CmpResponse;
 import org.cmp.rest.adapter.RestAdapter;
 import org.cmp.rest.dto.RestDispatcher;
-import org.cmp.rest.service.remote.RestRemoteService1;
-import org.cmp.rest.service.remote.RestRemoteService2;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;

@@ -1,15 +1,12 @@
 package org.cmp.plugin;
 
+import cn.hutool.json.JSONUtil;
 import org.cmp.core.adapter.dto.DispatcherContext;
-import org.cmp.core.error.CmpErrorCode;
 import org.cmp.core.resp.CmpResponse;
 import org.cmp.core.resp.GetCmpResponse;
 import org.cmp.rest.adapter.RestAdapter;
 import org.cmp.rest.dto.RestDispatcher;
-import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
-
-import java.util.Map;
 
 /**
  * @author: wangjian
@@ -21,12 +18,12 @@ public class Rest1AdapterImpl implements RestAdapter {
 
     @Override
     public CmpResponse test(RestDispatcher restDispatcher) {
-        return new GetCmpResponse<String>("Rest1AdapterImpl");
+        return new GetCmpResponse<String>(JSONUtil.toJsonStr(getDispatcherContext()));
     }
 
     @Override
     public DispatcherContext getDispatcherContext() {
-        DispatcherContext dispatcherContext = new DispatcherContext("1");
+        DispatcherContext dispatcherContext = new DispatcherContext("V1.0","plugn1");
         return dispatcherContext;
     }
 }

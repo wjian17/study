@@ -2,7 +2,6 @@ package org.cmp.app.controller.service.remote;
 
 import org.cmp.app.remote.AppRemoteService2;
 import org.cmp.core.resp.CmpResponse;
-import org.cmp.rest.service.remote.RestRemoteService2;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 

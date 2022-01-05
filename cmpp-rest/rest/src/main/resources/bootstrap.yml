@@ -4,6 +4,9 @@ server:
   port: 8080
 
 spring:
+  sleuth:
+    feign:
+      enabled: true
   profiles:
     active: local
   application:
@@ -73,4 +76,4 @@ feign:
   okHttp:
     enable: false
   hystrix:
-    enabled: false
+    enabled: true

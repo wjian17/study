@@ -2,8 +2,8 @@ package org.cmp.app.controller.service.remote;
 
 import lombok.extern.slf4j.Slf4j;
 import org.cmp.app.remote.AppRemoteService1;
+import org.cmp.core.error.CheckErrorCode;
 import org.cmp.core.resp.CmpResponse;
-import org.cmp.rest.service.remote.RestRemoteService1;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -18,7 +18,7 @@ public class AppRemoteService1Impl implements AppRemoteService1 {
     @PostMapping("/service1_1")
     public CmpResponse service1_1() {
         log.info("测试 fegin 调用 api服务");
-        return null;
+        return new CmpResponse(CheckErrorCode.FLOWABLE_NOT_EXISTS);
     }
 
     @Override

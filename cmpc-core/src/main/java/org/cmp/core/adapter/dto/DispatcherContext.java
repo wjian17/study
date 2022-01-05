@@ -15,7 +15,9 @@ import lombok.NoArgsConstructor;
 @EqualsAndHashCode
 public class DispatcherContext {
 
-    private String dispatcherParam;
+    private String version;
+
+    private String name;
 
 
 }

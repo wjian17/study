@@ -1,5 +1,6 @@
 package org.cmp.rest.dto;
 
+import lombok.Data;
 import org.cmp.core.adapter.dto.DispatcherContext;
 
 /**

@@ -18,12 +18,12 @@ public class Rest2AdapterImpl implements RestAdapter {
 
     @Override
     public DispatcherContext getDispatcherContext() {
-        DispatcherContext dispatcherContext = new DispatcherContext("2");
+        DispatcherContext dispatcherContext = new DispatcherContext("V1.0","plugn2");
         return dispatcherContext;
     }
 
     @Override
     public CmpResponse test(RestDispatcher restDispatcher) {
-        return new GetCmpResponse<String>("Rest2AdapterImpl");
+        return new GetCmpResponse<DispatcherContext>(getDispatcherContext());
     }
 }
