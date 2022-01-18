@@ -8,7 +8,7 @@
   <artifactId>cmpc-security</artifactId>
   <version>${cmpc.version}</version>
 
-  <name>cmpc-security</name>
+  <name>cmpc1-security</name>
   <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>
 
