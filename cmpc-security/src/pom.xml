@@ -6,7 +6,7 @@
 
   <groupId>org.cmp.security</groupId>
   <artifactId>cmpc-security</artifactId>
-  <version>${cmpc.version}</version>
+  <version>${cmpc.version111}</version>
 
   <name>cmpc1-security</name>
   <!-- FIXME change it to the project's website -->
