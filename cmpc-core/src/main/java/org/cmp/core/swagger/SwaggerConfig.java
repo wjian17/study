@@ -1,6 +1,6 @@
 package org.cmp.core.swagger;
 
-import com.github.xiaoymin.swaggerbootstrapui.annotations.EnableSwaggerBootstrapUI;
+//import com.github.xiaoymin.swaggerbootstrapui.annotations.EnableSwaggerBootstrapUI;
 import com.google.common.net.HttpHeaders;
 import io.swagger.annotations.Api;
 import lombok.Data;
@@ -32,7 +32,7 @@ import java.util.List;
 @Data
 @Configuration
 @EnableSwagger2
-@EnableSwaggerBootstrapUI
+//@EnableSwaggerBootstrapUI
 @ConditionalOnProperty(prefix = "config.swagger-ui", name = "enable", havingValue = "true")
 public class SwaggerConfig extends WebMvcConfigurationSupport {
 

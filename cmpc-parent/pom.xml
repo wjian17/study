@@ -23,6 +23,7 @@
         <spring-cloud.version>Greenwich.SR5</spring-cloud.version>
         <nacos.version>2.1.2.RELEASE</nacos.version>
         <project.build.sourcEncoding>UTF-8</project.build.sourcEncoding>
+        <spring-plugin.version>2.0.0.RELEASE</spring-plugin.version>
     </properties>
 
     <groupId>org.cmp.parent</groupId>
@@ -48,6 +49,12 @@
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
             <version>${nacos.version}</version>
+            <exclusions>
+                <exclusion>
+                    <artifactId>guava</artifactId>
+                    <groupId>com.google.guava</groupId>
+                </exclusion>
+            </exclusions>
         </dependency>
 
         <dependency>
@@ -88,6 +95,12 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-openfeign</artifactId>
             <version>${spring-cloud-openfeign.version}</version>
+            <exclusions>
+                <exclusion>
+                    <artifactId>guava</artifactId>
+                    <groupId>com.google.guava</groupId>
+                </exclusion>
+            </exclusions>
         </dependency>
 
         <!--        <dependency>-->
@@ -95,16 +108,22 @@
         <!--            <artifactId>feign-okhttp</artifactId>-->
         <!--            <version>${feign-client.version}</version>-->
         <!--        </dependency>-->
-        <!--        <dependency>-->
-        <!--            <groupId>io.github.openfeign</groupId>-->
-        <!--            <artifactId>feign-httpclient</artifactId>-->
-        <!--            <version>${feign-client.version}</version>-->
-        <!--        </dependency>-->
+                <dependency>
+                    <groupId>io.github.openfeign</groupId>
+                    <artifactId>feign-httpclient</artifactId>
+                    <version>${feign-client.version}</version>
+                </dependency>
 
         <!-- 熔断器 -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
+            <exclusions>
+                <exclusion>
+                    <artifactId>guava</artifactId>
+                    <groupId>com.google.guava</groupId>
+                </exclusion>
+            </exclusions>
         </dependency>
 
         <!-- 监控 -->

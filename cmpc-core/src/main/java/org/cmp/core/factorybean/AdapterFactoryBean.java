@@ -40,7 +40,7 @@ public class AdapterFactoryBean implements FactoryBean<Object>, ApplicationConte
 
     private ApplicationContext applicationContext;
 
-    private Map<DispatcherContext, BasicAdapter> dispatcherContextBasicAdapterCache = MapUtil.newHashMap();
+    private Map<DispatcherContext, BasicAdapter> dispatcherContextBasicAdapterCache = MapUtil.newConcurrentHashMap();
 
     @Override
     public Object getObject() throws Exception {

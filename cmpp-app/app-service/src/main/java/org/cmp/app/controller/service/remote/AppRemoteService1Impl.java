@@ -18,7 +18,7 @@ public class AppRemoteService1Impl implements AppRemoteService1 {
     @PostMapping("/service1_1")
     public CmpResponse service1_1() {
         log.info("测试 fegin 调用 api服务");
-        return new CmpResponse(CheckErrorCode.FLOWABLE_NOT_EXISTS);
+        return new CmpResponse();
     }
 
     @Override
